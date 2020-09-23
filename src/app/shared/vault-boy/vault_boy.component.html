@@ -1,17 +1,17 @@
 <div class="status">
-  <div class="left_arm level">
+  <div class="left_arm level" (click)="loseLife('left_arm')">
     <div #left_arm_status class="complete"></div>
   </div>
-  <div class="head level">
+  <div class="head level" (click)="loseLife('head')">
     <div #head_status class="complete"></div>
   </div>
-  <div class="right_arm level">
+  <div class="right_arm level" (click)="loseLife('right_arm')">
     <div #right_arm_status class="complete"></div>
   </div>
-  <div class="left_leg level">
+  <div class="left_leg level" (click)="loseLife('left_leg')">
     <div #left_leg_status class="complete"></div>
   </div>
-  <div class="right_leg level">
+  <div class="right_leg level" (click)="loseLife('right_leg')">
     <div #right_leg_status class="complete"></div>
   </div>
 </div>

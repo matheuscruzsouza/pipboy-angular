@@ -1,0 +1,20 @@
+<div class="breadcrumbs">
+  <ul>
+    <li
+      [routerLink]="[{outlets: {stat: ['status']}}]"
+      routerLinkActive="active"
+    >
+      STATUS
+    </li>
+    <li
+      [routerLink]="[{outlets: {stat: ['special']}}]"
+      routerLinkActive="active"
+    >
+      SPECIAL
+    </li>
+    <li [routerLink]="[{outlets: {stat: ['perks']}}]" routerLinkActive="active">
+      PERKS
+    </li>
+  </ul>
+</div>
+<router-outlet name="stat"></router-outlet>

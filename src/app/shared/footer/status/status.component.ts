@@ -4,23 +4,31 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
+  OnChanges,
 } from "@angular/core";
+import { DataService } from "../../data.service";
 
 @Component({
   selector: "app-footer-status",
   templateUrl: "./status.component.html",
   styleUrls: ["./status.component.sass"],
 })
-export class StatusComponent implements OnInit, AfterViewInit {
+export class FooterStatusComponent implements AfterViewInit {
   @ViewChild("complete") complete: ElementRef;
 
-  constructor() {}
+  life =
+    (this.dataService.player_status.head +
+      this.dataService.player_status.left_arm +
+      this.dataService.player_status.right_arm +
+      this.dataService.player_status.left_leg +
+      this.dataService.player_status.right_leg) /
+    5;
 
-  ngOnInit(): void {}
+  constructor(private dataService: DataService) {}
 
   ngAfterViewInit(): void {
-    console.log(this.complete);
+    console.log(this.dataService.player_status);
 
-    this.complete.nativeElement.style.width = "99%";
+    this.complete.nativeElement.style.width = `${this.dataService.player_status.experience}%`;
   }
 }
