@@ -22,14 +22,14 @@ export class VaultBoyComponent implements OnChanges, AfterViewInit {
   @ViewChild("right_arm_status") right_arm_status: ElementRef;
   @ViewChild("right_leg_status") right_leg_status: ElementRef;
 
-  status = this.dataService.player_status;
+  status = this.dataService.player;
 
   head = this.status.head < 10 ? "crippled" : "normal";
   left_arm = this.status.left_arm < 10 ? "crippled" : "normal";
   right_arm = this.status.right_arm < 10 ? "crippled" : "normal";
   left_leg = this.status.left_leg < 10 ? "crippled" : "normal";
   right_leg = this.status.right_leg < 10 ? "crippled" : "normal";
-  state = this.status.state;
+  state = this.status.getStatus();
 
   constructor(private dataService: DataService) {}
 
@@ -49,7 +49,7 @@ export class VaultBoyComponent implements OnChanges, AfterViewInit {
     this.right_arm = this.status.right_arm < 10 ? "crippled" : "normal";
     this.left_leg = this.status.left_leg < 10 ? "crippled" : "normal";
     this.right_leg = this.status.right_leg < 10 ? "crippled" : "normal";
-    this.state = this.status.state;
+    this.state = this.status.getStatus();
   }
 
   updatePercentage() {
@@ -61,30 +61,7 @@ export class VaultBoyComponent implements OnChanges, AfterViewInit {
   }
 
   loseLife(member) {
-    console.log(member);
-
-    switch (member) {
-      case "left_arm":
-        this.status.left_arm -= 10;
-        if (this.status.left_arm < 0) this.status.left_arm = 0;
-        break;
-      case "head":
-        this.status.head -= 10;
-        if (this.status.head < 0) this.status.head = 0;
-        break;
-      case "right_arm":
-        this.status.right_arm -= 10;
-        if (this.status.right_arm < 0) this.status.right_arm = 0;
-        break;
-      case "left_leg":
-        this.status.left_leg -= 10;
-        if (this.status.left_leg < 0) this.status.left_leg = 0;
-        break;
-      case "right_leg":
-        this.status.right_leg -= 10;
-        if (this.status.right_leg < 0) this.status.right_leg = 0;
-        break;
-    }
+    this.dataService.loseLife(member, 10);
     this.updateStatus();
     this.updatePercentage();
   }

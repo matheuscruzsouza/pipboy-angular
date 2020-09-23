@@ -16,19 +16,18 @@ import { DataService } from "../../data.service";
 export class FooterStatusComponent implements AfterViewInit {
   @ViewChild("complete") complete: ElementRef;
 
-  life =
-    (this.dataService.player_status.head +
-      this.dataService.player_status.left_arm +
-      this.dataService.player_status.right_arm +
-      this.dataService.player_status.left_leg +
-      this.dataService.player_status.right_leg) /
-    5;
+  life = 100;
+  action_points = 50;
 
   constructor(private dataService: DataService) {}
 
   ngAfterViewInit(): void {
-    console.log(this.dataService.player_status);
+    this.dataService.player_change.subscribe((player) => {
+      this.life = player.getLife();
 
-    this.complete.nativeElement.style.width = `${this.dataService.player_status.experience}%`;
+      console.log(player.experience);
+
+      this.complete.nativeElement.style.width = `${player.experience}%`;
+    });
   }
 }

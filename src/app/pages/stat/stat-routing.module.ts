@@ -13,6 +13,11 @@ const routes: Routes = [
     component: StatComponent,
     children: [
       {
+        path: "",
+        pathMatch: "full",
+        redirectTo: "status",
+      },
+      {
         path: "status",
         component: StatusComponent,
         outlet: "stat",

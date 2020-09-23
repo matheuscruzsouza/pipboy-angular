@@ -20,13 +20,6 @@ export class StatComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.router.events.subscribe((e) => {
-    //   if (e instanceof NavigationStart) {
-    //     let breadcrumbs = e.url.split("/");
-    //     if (breadcrumbs[breadcrumbs.length - 1] == "stat") {
-    //       this.router.navigate(["stat", "status"]);
-    //     }
-    //   }
-    // });
+    this.router.navigateByUrl("/stat/(stat:status)");
   }
 }

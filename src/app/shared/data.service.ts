@@ -1,18 +1,18 @@
-import { Injectable } from "@angular/core";
+import { Injectable, EventEmitter } from "@angular/core";
+import { Player } from "./model/player";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class DataService {
-  player_status = {
-    head: 100,
-    left_arm: 25,
-    right_arm: 100,
-    left_leg: 50,
-    right_leg: 100,
-    state: "hurt",
-    experience: 95,
-  };
+  player = new Player();
+  player_change = new EventEmitter<Player>();
 
   constructor() {}
+
+  loseLife(member, value) {
+    this.player.loseLife(member, value);
+    this.player_change.emit(this.player);
+  }
 }
