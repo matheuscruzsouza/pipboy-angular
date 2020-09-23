@@ -1,0 +1,32 @@
+:host
+  p
+    margin: 0
+    margin-top: -12px
+    background-color: var(--background-color)
+    width: 80%
+    margin-left: 10%
+
+  ul.header-menu
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    text-transform: uppercase
+    border-bottom: 3px solid var(--text-color)
+    font-family: 'Monofonto'
+    color: var(--text-color)
+
+    li.active
+      position: relative
+      width: 60px
+      text-align: center
+      border-top: 3px solid var(--text-color)
+      border-left: 3px solid var(--text-color)
+      border-right: 3px solid var(--text-color)
+
+      .bottom
+        height: 3px
+        overflow-x: visible
+        position: absolute
+        background-color: var(--background-color)
+        width: 100%

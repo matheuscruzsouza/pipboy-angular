@@ -1,0 +1,38 @@
+:host
+  position: absolute
+  width: 88.7%
+  color: var(--text-color)
+  font-family: 'Monofonto'
+  bottom: 35px
+
+  footer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    section
+      height: 20px
+      background-color: var(--section-color)
+      padding: 0 10px
+      box-sizing: border-box
+      display: flex
+      flex-direction: row
+      line-height: 20px
+
+      .level
+        border: 2px solid var(--text-color)
+        width: 70%
+        margin: 3px
+        position: relative
+        left: 10%
+
+        .complete
+          width: 20px
+          background-color: var(--text-color)
+          position: absolute
+          height: 100%
+          z-index: 1
+
+      .ap-status
+        text-align: right
+        width: 100%

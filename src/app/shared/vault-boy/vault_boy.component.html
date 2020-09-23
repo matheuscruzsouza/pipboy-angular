@@ -1,0 +1,25 @@
+<div class="status">
+  <div class="left_arm level">
+    <div #left_arm_status class="complete"></div>
+  </div>
+  <div class="head level">
+    <div #head_status class="complete"></div>
+  </div>
+  <div class="right_arm level">
+    <div #right_arm_status class="complete"></div>
+  </div>
+  <div class="left_leg level">
+    <div #left_leg_status class="complete"></div>
+  </div>
+  <div class="right_leg level">
+    <div #right_leg_status class="complete"></div>
+  </div>
+</div>
+
+<vault-boy-head [state]="state" [status]="head"></vault-boy-head>
+<vault-boy-body
+  [left_arm]="left_arm"
+  [right_arm]="right_arm"
+  [left_leg]="left_leg"
+  [right_leg]="right_leg"
+></vault-boy-body>
