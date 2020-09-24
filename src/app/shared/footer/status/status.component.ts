@@ -22,12 +22,16 @@ export class FooterStatusComponent implements AfterViewInit {
   constructor(private dataService: DataService) {}
 
   ngAfterViewInit(): void {
+    this.setStatus(this.dataService.player);
+
     this.dataService.player_change.subscribe((player) => {
-      this.life = player.getLife();
-
-      console.log(player.experience);
-
-      this.complete.nativeElement.style.width = `${player.experience}%`;
+      this.setStatus(player);
     });
+  }
+
+  setStatus(player) {
+    this.life = player.getLife();
+
+    this.complete.nativeElement.style.width = `${player.experience}%`;
   }
 }
