@@ -3,10 +3,10 @@
 </div>
 <div class="info-bar">
   <div class="weapon"></div>
-  <div class="aim"><p>21</p></div>
+  <div class="aim"><p>{{ player_status?.aim || 0}}</p></div>
   <div class="helmet"></div>
-  <div class="shield"><p>110</p></div>
-  <div class="voltage"><p>126</p></div>
-  <div class="nuclear"><p>35</p></div>
+  <div class="shield"><p>{{player_status?.shield || 0}}</p></div>
+  <div class="voltage"><p>{{player_status?.voltage || 0}}</p></div>
+  <div class="nuclear"><p>{{player_status?.nuclear || 0}}</p></div>
 </div>
 <app-footer-status></app-footer-status>

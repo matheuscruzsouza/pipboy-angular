@@ -1,33 +1,39 @@
 export class Marker {
-  src_not_found: string;
-  src_found: string;
+  name: string;
   x: number;
   y: number;
   width: number;
   height: number;
 
   found: boolean;
+  hud: boolean;
 
   constructor(
-    src_not_found: string,
-    src_found: string,
+    name: string,
     x: number,
     y: number,
-    width: number,
-    height: number,
-    found: boolean = false
+    options?: {
+      width?: number;
+      height?: number;
+      found?: boolean;
+      hud?: boolean;
+    }
   ) {
-    this.src_not_found = src_not_found;
-    this.src_found = src_found;
+    this.name = name;
     this.x = x;
     this.y = y;
-    this.width = width;
-    this.height = height;
+    this.width = options?.width;
+    this.height = options?.height;
 
-    this.found = found;
+    this.found = options?.found || false;
+    this.hud = options?.hud || false;
   }
 
   getSrc(): string {
-    return this.found ? this.src_found : this.src_not_found;
+    const image_sprite = this.found ? "found" : "not_found";
+    const image_path = `assets/images/map/markers/${image_sprite}/${this.name}.svg`;
+    const image_hud = `assets/images/map/markers/${this.name}.svg`;
+
+    return this.hud ? image_hud : image_path;
   }
 }

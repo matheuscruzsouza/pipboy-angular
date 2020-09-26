@@ -23,6 +23,7 @@ export class Player {
     this.Addicted = 0;
 
     this.experience = 0;
+    this.action_points = 50;
   }
 
   getStatus(): string {

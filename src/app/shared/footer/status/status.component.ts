@@ -16,8 +16,8 @@ import { DataService } from "../../data.service";
 export class FooterStatusComponent implements AfterViewInit {
   @ViewChild("complete") complete: ElementRef;
 
-  life = 100;
-  action_points = 50;
+  life = this.dataService.player.getLife();
+  action_points = this.dataService.player.action_points;
 
   constructor(private dataService: DataService) {}
 

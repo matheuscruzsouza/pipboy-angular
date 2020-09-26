@@ -5,6 +5,11 @@ import { StatComponent } from "./pages/stat/stat.component";
 
 const routes: Routes = [
   {
+    path: "",
+    pathMatch: "full",
+    redirectTo: "stat",
+  },
+  {
     path: "stat",
     component: StatComponent,
   },

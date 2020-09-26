@@ -10,51 +10,64 @@
 }
 
 .weapon {
-  background: url("/assets/images/HUD/pistol_green.png") center no-repeat;
+  background: url("/assets/images/HUD/Menu/icon_52.svg") center no-repeat;
+  background-size: 70px;
   width: 100px;
   height: 65px;
+  background-color: #0c02;
 }
 
 .aim {
-  background: url("/assets/images/HUD/aim_green.png") center no-repeat;
+  background: url("/assets/images/HUD/Menu/icon_26.svg") center no-repeat;
+  background-size: 20px;
+  background-position-y: 8px;
+  margin: 0 5px;
   color: var(--text-color);
   font-family: "Monofonto";
   width: 35px;
-  height: 35px;
-  margin-top: -20px;
+  height: 65px;
+  background-color: #0c02;
 }
 
 .helmet {
-  background: url("/assets/images/HUD/helmet_green.png") center no-repeat;
+  background: url("/assets/images/HUD/Menu/icon_54.svg") center no-repeat;
+  background-size: 70px;
   width: 85px;
   height: 65px;
+  background-color: #0c02;
 }
 
 .shield {
-  background: url("/assets/images/HUD/shield_green.png") center no-repeat;
-  color: var(--text-color);
+  background: url("/assets/images/HUD/Menu/icon_14.svg") center no-repeat;
+  background-size: 20px;
+  background-position-y: 6px;
+  margin: 0 2.5px 0 5px;
   font-family: "Monofonto";
   width: 35px;
-  height: 35px;
-  margin-top: -20px;
+  height: 65px;
+  background-color: #0c02;
 }
 
 .voltage {
-  background: url("/assets/images/HUD/voltage_green.png") center no-repeat;
-  color: var(--text-color);
+  background: url("/assets/images/HUD/Menu/icon_20.svg") center no-repeat;
+  background-size: 18px;
+  background-position-y: 6px;
+  margin: 0 2.5px;
   font-family: "Monofonto";
   width: 35px;
-  height: 35px;
-  margin-top: -20px;
+  height: 65px;
+  background-color: #0c02;
 }
 
 .nuclear {
-  background: url("/assets/images/HUD/nuclear_green.png") center no-repeat;
-  color: var(--text-color);
+  background: url("/assets/images/HUD/Menu/icon_24.svg") center no-repeat;
+  background-size: 20px;
+  background-position-y: 8px;
+  margin: 0 2.5px;
   font-family: "Monofonto";
   width: 35px;
-  height: 35px;
-  margin-top: -20px;
+  height: 65px;
+  background-color: #0c02;
 }
 
 /* container properties */

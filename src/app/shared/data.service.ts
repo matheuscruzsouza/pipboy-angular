@@ -19,22 +19,10 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker(
-        "assets/images/HUD/MAP/vault_not_found_green.png",
-        "assets/images/HUD/MAP/vault_found_green.png",
-        395.1,
-        121.5,
-        32.5,
-        32.5
-      ),
-      new Marker(
-        "assets/images/HUD/MAP/sanctuary_not_found_green.png",
-        "assets/images/HUD/MAP/sanctuary_green.png",
-        469,
-        148,
-        22.5,
-        32.5
-      ),
+      new Marker("vault", 395.1, 121.5, { found: false }),
+      new Marker("sanctuary", 469, 148),
+      new Marker("player", 370.1, 121.5, { width: 15, height: 20, hud: true }),
+      new Marker("destiny", 510, 140, { width: 12, height: 30 }),
     ];
   }
 }
