@@ -7,13 +7,21 @@ import { MenuComponent } from "./shared/header/menu/menu.component";
 
 import { StatModule } from "./pages/stat/stat.module";
 import { MapComponent } from "./pages/map/map.component";
-import { InvComponent } from './pages/inv/inv.component';
-import { DataComponent } from './pages/data/data.component';
-import { RadioComponent } from './pages/radio/radio.component';
+import { InvComponent } from "./pages/inv/inv.component";
+import { DataComponent } from "./pages/data/data.component";
+import { RadioComponent } from "./pages/radio/radio.component";
+import { FooterModule } from "./shared/footer/footer.module";
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, MapComponent, InvComponent, DataComponent, RadioComponent],
-  imports: [BrowserModule, AppRoutingModule, StatModule],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    MapComponent,
+    InvComponent,
+    DataComponent,
+    RadioComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, StatModule, FooterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
