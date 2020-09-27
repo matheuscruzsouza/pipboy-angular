@@ -1,3 +1,8 @@
-<div class="map-wrapper scrollbar" id="scrollbar-custom">
+<div
+  class="map-wrapper scrollbar"
+  id="scrollbar-custom"
+  (scroll)="onScroll($event)"
+>
+  <canvas #destino id="destino" width="2048" height="2048"></canvas>
   <canvas #canvas width="2048" height="2048"></canvas>
 </div>
