@@ -19,10 +19,11 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker("vault", 395.1, 121.5, { found: false }),
-      new Marker("sanctuary", 469, 148),
+      new Marker("vault", 395.1, 121.5, { found: true }),
+      new Marker("sanctuary", 469, 148, { found: true }),
       new Marker("player", 370.1, 121.5, { width: 15, height: 20, hud: true }),
-      new Marker("destiny", 510, 140, { width: 12, height: 30 }),
+      new Marker("hospital", 1186, 386),
+      new Marker("destiny", 1186, 371, { width: 12, height: 30 }),
     ];
   }
 }
