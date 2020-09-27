@@ -33,6 +33,19 @@ export class DataService {
       url:
         "http://fallout.fm:8000/falloutfm8.ogg?token=a43aafe3f3856e610476328188c88087%2F5c7a8f7a?retry=0",
     },
+    megaton: {
+      name: "Megaton Radio",
+      url: "https://us2.internet-radio.com/proxy/megatoncafe?mp=/stream;",
+    },
+    rockamolly: {
+      name: "Rockamolly",
+      url:
+        "https://uk6.internet-radio.com/proxy/rockaroundtheblock?mp=/stream;",
+    },
+    majestic: {
+      name: "Majestic Radio",
+      url: "https://uk3.internet-radio.com/proxy/majesticjukebox?mp=/live",
+    },
   };
   radio = this.RADIOS["off"];
   radio_change = new EventEmitter();

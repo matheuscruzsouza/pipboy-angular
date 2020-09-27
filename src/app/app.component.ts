@@ -13,6 +13,10 @@ export class AppComponent implements AfterViewInit {
 
   radio = new Audio();
 
+  src = "";
+
+  @ViewChild("frame", { static: true }) video: HTMLFrameElement;
+
   constructor(private dataService: DataService) {}
 
   ngAfterViewInit(): void {

@@ -8,7 +8,9 @@ import { Component, OnInit } from "@angular/core";
 export class FooterMapComponent implements OnInit {
   DATE = new Date();
 
-  constructor() {}
+  constructor() {
+    this.DATE.setFullYear(this.DATE.getFullYear() + 267);
+  }
 
   ngOnInit(): void {}
 }
