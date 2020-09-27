@@ -50,7 +50,15 @@ export class DataService {
   radio = this.RADIOS["off"];
   radio_change = new EventEmitter();
 
-  constructor() {}
+  constructor() {
+    const radio_name = localStorage.getItem("radio");
+
+    this.setRadio(
+      Object.values(this.RADIOS).filter(
+        (radio) => radio.name == radio_name
+      )[0] || this.RADIOS["off"]
+    );
+  }
 
   loseLife(member, value) {
     this.player.loseLife(member, value);
@@ -83,6 +91,7 @@ export class DataService {
 
   setRadio(radio) {
     this.radio = radio;
+    localStorage.setItem("radio", radio.name);
     this.radio_change.emit(this.radio);
   }
 }
