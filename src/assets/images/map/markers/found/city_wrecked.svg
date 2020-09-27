@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128pt"
+   height="121pt"
+   viewBox="0 0 128 121"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="city_wrecked.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="836"
+     inkscape:window-height="480"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.4628099"
+     inkscape:cx="85.333333"
+     inkscape:cy="80.666667"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="surface1" />
+  <g
+     id="surface1">
+    <path
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 115.33203,9.332031 -11,14.667969 15,10 L 115,41 99,30.667969 l -4.332031,5.664062 4.664062,17 L 105,48 120,61.667969 116.33203,77.332031 H 108 v 17 h 8.33203 v -7 H 128 V 121 h -10.66797 v -16.33203 h -8.66406 V 121 H 66 V 97.332031 H 57.332031 V 121 H 32.667969 V 99.332031 h -14 V 121 H 7 V 88.667969 H 0 L 11.667969,78 20,85.332031 l 9.332031,-5 L 26.667969,65 l 12,-10.667969 v -10 h -7 l 12.664062,-17 L 43,10 22.667969,15.667969 22,9.332031 48.332031,0 l 1.335938,20 12,-16 8.664062,11.667969 -7,6.664062 2,11 L 79,48.332031 84.332031,50 v 17 l 8,-7.332031 -6.664062,-25 L 92,26 l -5,-3.332031 4.332031,-7 6,3.664062 11.667969,-15 6.33203,5 m -50.999999,44 V 82.667969 H 73 V 53.332031 h -8.667969 m 35.667969,24 h -8.667969 v 17 H 100 v -17 m -52,-24 v 29.335938 h 8.667969 V 53.332031 H 48"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

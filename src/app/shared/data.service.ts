@@ -67,9 +67,9 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker("vault", 395.1, 121.5, { found: true }),
-      new Marker("sanctuary", 469, 148, { found: true }),
-      new Marker("hospital", 1173, 371),
+      new Marker("vault", 409, 138, { found: true }),
+      new Marker("sanctuary", 476, 162, { found: true }),
+      new Marker("hospital", 1186, 386),
     ];
   }
 

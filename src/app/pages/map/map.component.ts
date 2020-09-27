@@ -27,6 +27,9 @@ export class MapComponent implements OnInit {
 
   ITEMS = {};
 
+  isDown = true;
+  offset: any[];
+
   onScroll(event) {
     this.clearCanvas(this.ctx_destino);
 
@@ -118,7 +121,8 @@ export class MapComponent implements OnInit {
   }
 
   calculeFakeMarker() {
-    const parent = this.canvas.nativeElement.parentElement;
+    const element = this.canvas_destino.nativeElement;
+    const parent = element.parentElement;
     const left = parent.scrollLeft + parent.clientWidth;
     const top = parent.scrollTop;
 
@@ -136,5 +140,40 @@ export class MapComponent implements OnInit {
     };
 
     return position;
+  }
+
+  onMouseUp(event) {
+    this.isDown = false;
+  }
+
+  onMouseDown(event) {
+    this.isDown = true;
+    this.offset = [
+      this.canvas.nativeElement.offsetLeft - event.clientX,
+      this.canvas.nativeElement.offsetTop - event.clientY,
+    ];
+  }
+
+  onMouseMove(event) {
+    if (this.isDown && this.offset) {
+      const canvasElement = this.canvas.nativeElement;
+      const destinoElement = this.canvas_destino.nativeElement;
+      const parentElement = this.canvas.nativeElement.parentElement;
+
+      const mousePosition = {
+        x: event.clientX,
+        y: event.clientY,
+      };
+
+      const position = {
+        x: mousePosition.x + this.offset[0],
+        y: mousePosition.y + this.offset[1],
+      };
+
+      console.log(position);
+
+      parentElement.scrollLeft += position.x / 10;
+      parentElement.scrollTop += position.y / 10;
+    }
   }
 }
