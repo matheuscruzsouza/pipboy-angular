@@ -28,6 +28,8 @@ export class AppComponent implements AfterViewInit {
       this.radio.src = src;
       this.radio.load();
       this.radio.play();
+    } else {
+      this.radio.pause();
     }
   }
 }
