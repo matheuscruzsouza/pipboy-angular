@@ -1,0 +1,16 @@
+:host
+  ul
+    list-style: none
+    padding: 0
+
+    li
+      &::before
+        content: "\25A0"
+        font-weight: bold
+        display: inline-block
+        margin-left: 2px
+        color: var(--background-color)
+
+      &.selected
+        background-color: var(--text-color)
+        color: var(--background-color)

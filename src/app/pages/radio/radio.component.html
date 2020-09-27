@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <ul>
+      <li
+        *ngFor="let radio of radios | keyvalue"
+        (click)="setRadio(radio)"
+        [ngClass]="{'selected': isRadioSelected(radio.value)}"
+      >
+        {{radio.value.name}}
+      </li>
+    </ul>
+  </div>
+</div>

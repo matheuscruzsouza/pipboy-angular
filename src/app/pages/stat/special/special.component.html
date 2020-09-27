@@ -1,1 +1,43 @@
-<p>special works!</p>
+<div class="special-list">
+  <ul>
+    <li
+      *ngFor="let key of LABELS"
+      (click)="setSpecial(key)"
+      [ngClass]="{'selected': key == selected}"
+    >
+      <span>{{key}}</span>
+      <div style="display: flex;">
+        <img
+          class="selector"
+          src="assets/images/HUD/Menu/icon_9.svg"
+          width="15"
+          alt=""
+          *ngIf="key == selected"
+        />
+        <div style="width: 15px;" *ngIf="key != selected"></div>
+        <span>{{getValue(key)}}</span>
+        <img
+          class="selector"
+          src="assets/images/HUD/Menu/icon_10.svg"
+          width="15"
+          alt=""
+          *ngIf="key == selected"
+        />
+        <div style="width: 15px;" *ngIf="key != selected"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="special-data">
+  <div class="image">
+    <img
+      style="width: 25vw; display: block; margin: auto;"
+      src="{{img}}"
+      alt="special image"
+    />
+  </div>
+  <div class="text">
+    <p style="width: 35vw;">{{text}}</p>
+  </div>
+</div>
+<app-footer-status></app-footer-status>

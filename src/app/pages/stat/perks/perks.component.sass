@@ -1,0 +1,23 @@
+:host
+  display: flex
+  flex-direction: row
+
+  .perk-list
+    width: 50vw
+    ul
+      list-style: none
+      padding: 0
+      width: 100%
+
+      li
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 2px 5px
+
+        text-transform: capitalize
+
+        &.selected
+          background-color: var(--text-color)
+          color: var(--background-color)

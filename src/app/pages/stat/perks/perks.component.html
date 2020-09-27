@@ -1,1 +1,35 @@
-<p>perks works!</p>
+<div class="perk-list">
+  <ul>
+    <li
+      *ngFor="let key of PERKS"
+      (click)="setPerk(key)"
+      [ngClass]="{'selected': key == selected}"
+    >
+      <span>{{key}}</span>
+      <div style="display: flex;">
+        <img
+          class="selector"
+          src="assets/images/HUD/Menu/icon_9.svg"
+          width="15"
+          alt=""
+        />
+        <span>{{getValue(key)}}</span>
+        <img
+          class="selector"
+          src="assets/images/HUD/Menu/icon_10.svg"
+          width="15"
+          alt=""
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="perk-data">
+  <div class="image">
+    <img src="{{img}}" alt="perk image" />
+  </div>
+  <div class="text">
+    <p>{{text}}</p>
+  </div>
+</div>
+<app-footer-status></app-footer-status>

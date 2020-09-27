@@ -119,19 +119,20 @@ export class MapComponent implements OnInit {
 
   calculeFakeMarker() {
     const parent = this.canvas.nativeElement.parentElement;
-    const left = parent.scrollLeft;
+    const left = parent.scrollLeft + parent.clientWidth;
+    const top = parent.scrollTop;
 
     const player = this.dataService.getPlayerPosition();
     const destino = this.dataService.getPlayerDestiny();
 
-    const cateto_adjacente = left + destino.x - parent.clientWidth;
+    const cateto_adjacente = left;
     const angulo_a = Math.atan2(destino.x - player.x, destino.y - player.y);
     const angulo_b = 90 * (Math.PI / 180) - angulo_a;
     const cateto_oposto = cateto_adjacente * Math.tan(angulo_b);
 
     const position = {
-      x: cateto_adjacente - 20,
-      y: cateto_oposto,
+      x: left > cateto_adjacente ? left : cateto_adjacente - 20,
+      y: top + 20 > cateto_oposto ? top + 20 : cateto_oposto,
     };
 
     return position;
