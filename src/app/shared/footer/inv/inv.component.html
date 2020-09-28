@@ -1,0 +1,43 @@
+<footer>
+  <section style="width: 20%;">
+    <div>
+      <img
+        src="assets/images/HUD/Menu/icon_67.svg"
+        width="24px"
+        alt="Carry weight"
+      />
+    </div>
+  </section>
+  <section style="width: 19%;">
+    <div>
+      <img src="assets/images/HUD/Menu/icon_69.svg" width="24px" alt="Caps" />
+    </div>
+  </section>
+  <section style="width: 60%;">
+    <div class="ap-status">
+      <div *ngIf="menu == 'weapons'">
+        <img src="assets/images/HUD/Menu/icon_52.svg" width="30px" alt="Gun" />
+        <img src="assets/images/HUD/Menu/icon_26.svg" width="15px" alt="Aim" />
+      </div>
+
+      <div *ngIf="menu == 'apparel'">
+        <img src="assets/images/HUD/Menu/icon_54.svg" width="30px" alt="Gun" />
+        <img
+          src="assets/images/HUD/Menu/icon_14.svg"
+          width="12px"
+          alt="Shield"
+        />
+      </div>
+
+      <div *ngIf="menu == 'aid'" style="display: flex;">
+        HP
+        <div class="level">
+          <div #complete class="complete"></div>
+          <div #possibility class="possibility"></div>
+        </div>
+      </div>
+
+      <div *ngIf="menu == 'misc' || menu == 'junk'"></div>
+    </div>
+  </section>
+</footer>

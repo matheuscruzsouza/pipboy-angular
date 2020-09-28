@@ -1,1 +1,26 @@
-<p>inv works!</p>
+<div class="breadcrumbs">
+  <ul>
+    <li
+      [routerLink]="[{outlets: {inv: ['weapons']}}]"
+      routerLinkActive="active"
+    >
+      WEAPONS
+    </li>
+    <li
+      [routerLink]="[{outlets: {inv: ['apparel']}}]"
+      routerLinkActive="active"
+    >
+      APPAREL
+    </li>
+    <li [routerLink]="[{outlets: {inv: ['aid']}}]" routerLinkActive="active">
+      AID
+    </li>
+    <li [routerLink]="[{outlets: {inv: ['misc']}}]" routerLinkActive="active">
+      MISC
+    </li>
+    <li [routerLink]="[{outlets: {inv: ['junk']}}]" routerLinkActive="active">
+      JUNK
+    </li>
+  </ul>
+</div>
+<router-outlet name="inv"></router-outlet>

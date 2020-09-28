@@ -170,8 +170,6 @@ export class MapComponent implements OnInit {
         y: mousePosition.y + this.offset[1],
       };
 
-      console.log(position);
-
       parentElement.scrollLeft += position.x / 10;
       parentElement.scrollTop += position.y / 10;
     }
