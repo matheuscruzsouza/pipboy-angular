@@ -38,7 +38,9 @@ export class RadioService {
   radio_change = new EventEmitter();
 
   constructor() {
-    const radio_name = localStorage.getItem("radio") || "off";
+    const radio_name = localStorage.getItem("radio") || "Desligado";
+
+    console.log(this.RADIOS.filter((radio) => radio.name == radio_name)[0]);
 
     this.setRadio(this.RADIOS.filter((radio) => radio.name == radio_name)[0]);
   }
