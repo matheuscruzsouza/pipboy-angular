@@ -7,7 +7,7 @@ import { AidComponent } from "./aid/aid.component";
 import { MiscComponent } from "./misc/misc.component";
 import { JunkComponent } from "./junk/junk.component";
 import { InvRoutingModule } from "./inv-routing.module";
-import { FooterModule } from "src/app/shared/footer/footer.module";
+import { FooterModule } from "src/app/shared/component/footer/footer.module";
 
 @NgModule({
   declarations: [

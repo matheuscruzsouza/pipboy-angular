@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService } from "src/app/shared/data.service";
+import { RadioService } from "src/app/shared/radio.service";
 
 @Component({
   selector: "app-radio",
@@ -10,19 +10,19 @@ export class RadioComponent implements OnInit {
   radios: any;
   radio: any;
 
-  constructor(private dataService: DataService) {}
+  constructor(private radioService: RadioService) {}
 
   ngOnInit(): void {
-    this.radios = this.dataService.getRadioList();
-    this.radio = this.dataService.radio;
+    this.radios = this.radioService.getRadioList();
+    this.radio = this.radioService.radio;
 
-    this.dataService.radio_change.subscribe((radio) => {
+    this.radioService.radio_change.subscribe((radio) => {
       this.radio = radio;
     });
   }
 
   setRadio(radio) {
-    this.dataService.setRadio(radio.value);
+    this.radioService.setRadio(radio.value);
   }
 
   isRadioSelected(radio) {

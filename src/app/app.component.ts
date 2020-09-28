@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
-import { DataService } from "./shared/data.service";
+import { Component, ViewChild, AfterViewInit } from "@angular/core";
+import { RadioService } from "./shared/radio.service";
 
 @Component({
   selector: "app-root",
@@ -17,12 +17,12 @@ export class AppComponent implements AfterViewInit {
 
   @ViewChild("frame", { static: true }) video: HTMLFrameElement;
 
-  constructor(private dataService: DataService) {}
+  constructor(private radioService: RadioService) {}
 
   ngAfterViewInit(): void {
-    this.playAudio(this.dataService.radio.url);
+    this.playAudio(this.radioService.radio.url);
 
-    this.dataService.radio_change.subscribe((radio) => {
+    this.radioService.radio_change.subscribe((radio) => {
       this.playAudio(radio.url);
     });
   }

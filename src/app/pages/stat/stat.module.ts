@@ -1,14 +1,15 @@
 import { NgModule } from "@angular/core";
 
 import { CommonModule } from "@angular/common";
-import { VaultBoyModule } from "src/app/shared/vault-boy/vault_boy.module";
 
 import { StatusComponent } from "./status/status.component";
 import { SpecialComponent } from "./special/special.component";
 import { PerksComponent } from "./perks/perks.component";
 import { StatComponent } from "./stat.component";
-import { FooterModule } from "src/app/shared/footer/footer.module";
+
 import { StatRoutingModule } from "./stat-routing.module";
+import { FooterModule } from "src/app/shared/component/footer/footer.module";
+import { VaultBoyModule } from "src/app/shared/component/vault-boy/vault_boy.module";
 
 @NgModule({
   declarations: [

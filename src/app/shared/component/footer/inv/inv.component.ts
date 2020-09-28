@@ -6,8 +6,8 @@ import {
   ElementRef,
   AfterViewInit,
 } from "@angular/core";
-import { DataService } from "../../data.service";
-import { Player } from "../../model/player";
+import { DataService } from "../../../data.service";
+import { Player } from "../../../model/player";
 
 @Component({
   selector: "app-footer-inv",
