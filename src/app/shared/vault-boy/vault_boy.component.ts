@@ -24,14 +24,16 @@ export class VaultBoyComponent implements OnChanges, AfterViewInit {
 
   status = this.dataService.player;
 
-  head = this.status.head < 10 ? "crippled" : "normal";
-  left_arm = this.status.left_arm < 10 ? "crippled" : "normal";
-  right_arm = this.status.right_arm < 10 ? "crippled" : "normal";
-  left_leg = this.status.left_leg < 10 ? "crippled" : "normal";
-  right_leg = this.status.right_leg < 10 ? "crippled" : "normal";
+  head: string;
+  left_arm: string;
+  right_arm: string;
+  left_leg: string;
+  right_leg: string;
   state = this.status.getStatus();
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    this.updateStatus();
+  }
 
   ngOnChanges(): void {
     this.updateStatus();
@@ -44,20 +46,24 @@ export class VaultBoyComponent implements OnChanges, AfterViewInit {
   }
 
   updateStatus() {
-    this.head = this.status.head < 10 ? "crippled" : "normal";
-    this.left_arm = this.status.left_arm < 10 ? "crippled" : "normal";
-    this.right_arm = this.status.right_arm < 10 ? "crippled" : "normal";
-    this.left_leg = this.status.left_leg < 10 ? "crippled" : "normal";
-    this.right_leg = this.status.right_leg < 10 ? "crippled" : "normal";
+    const members = this.status.health.members;
+
+    this.head = members.head < 10 ? "crippled" : "normal";
+    this.left_arm = members.left_arm < 10 ? "crippled" : "normal";
+    this.right_arm = members.right_arm < 10 ? "crippled" : "normal";
+    this.left_leg = members.left_leg < 10 ? "crippled" : "normal";
+    this.right_leg = members.right_leg < 10 ? "crippled" : "normal";
     this.state = this.status.getStatus();
   }
 
   updatePercentage() {
-    this.head_status.nativeElement.style.width = `${this.status.head}%`;
-    this.left_arm_status.nativeElement.style.width = `${this.status.left_arm}%`;
-    this.right_arm_status.nativeElement.style.width = `${this.status.right_arm}%`;
-    this.left_leg_status.nativeElement.style.width = `${this.status.left_leg}%`;
-    this.right_leg_status.nativeElement.style.width = `${this.status.right_leg}%`;
+    const members = this.status.health.members;
+
+    this.head_status.nativeElement.style.width = `${members.head}%`;
+    this.left_arm_status.nativeElement.style.width = `${members.left_arm}%`;
+    this.right_arm_status.nativeElement.style.width = `${members.right_arm}%`;
+    this.left_leg_status.nativeElement.style.width = `${members.left_leg}%`;
+    this.right_leg_status.nativeElement.style.width = `${members.right_leg}%`;
   }
 
   loseLife(member) {

@@ -19,6 +19,7 @@ export class FooterStatusComponent implements AfterViewInit {
   life = this.dataService.player.getLife();
   action_points = this.dataService.player.action_points;
   total_action_points = this.dataService.player.total_action_points;
+  total_health_points = this.dataService.player.total_health_points;
 
   constructor(private dataService: DataService) {}
 

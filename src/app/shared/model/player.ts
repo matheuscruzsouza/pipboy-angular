@@ -1,25 +1,40 @@
 export class Player {
-  head: number;
-  left_arm: number;
-  right_arm: number;
-  left_leg: number;
-  right_leg: number;
-
-  irraidated: number;
-  Addicted: number;
-
-  strength: number;
-  perception: number;
-  endurance: number;
-  charisma: number;
-  inteligence: number;
-  agility: number;
-  luck: number;
-
   experience: number;
-  total_action_points: number;
 
+  total_action_points: number;
+  total_health_points: number;
   action_points: number;
+
+  health: {
+    members: {
+      head: number;
+      left_arm: number;
+      right_arm: number;
+      left_leg: number;
+      right_leg: number;
+    };
+
+    irraidated: number;
+    Addicted: number;
+  };
+
+  armor: {
+    head: any;
+    left_arm: any;
+    right_arm: any;
+    left_leg: any;
+    right_leg: any;
+  };
+
+  special: {
+    strength: number;
+    perception: number;
+    endurance: number;
+    charisma: number;
+    inteligence: number;
+    agility: number;
+    luck: number;
+  };
 
   constructor(
     options = {
@@ -39,80 +54,58 @@ export class Player {
       luck: 0,
       experience: 0,
       total_action_points: 50,
+      total_health_points: 150,
     }
   ) {
-    this.head = options.head;
-    this.left_arm = options.left_arm;
-    this.right_arm = options.right_arm;
-    this.left_leg = options.left_leg;
-    this.right_leg = options.right_leg;
+    this.health = {
+      members: {
+        head: options.head,
+        left_arm: options.left_arm,
+        right_arm: options.right_arm,
+        left_leg: options.left_leg,
+        right_leg: options.right_leg,
+      },
+      irraidated: options.irraidated,
+      Addicted: options.Addicted,
+    };
 
-    this.irraidated = options.irraidated;
-    this.Addicted = options.Addicted;
-
-    this.strength = options.strength;
-    this.perception = options.perception;
-    this.endurance = options.endurance;
-    this.charisma = options.charisma;
-    this.inteligence = options.inteligence;
-    this.agility = options.agility;
-    this.luck = options.luck;
+    this.special = {
+      strength: options.strength,
+      perception: options.perception,
+      endurance: options.endurance,
+      charisma: options.charisma,
+      inteligence: options.inteligence,
+      agility: options.agility,
+      luck: options.luck,
+    };
 
     this.experience = options.experience;
     this.total_action_points = options.total_action_points;
     this.action_points = options.total_action_points;
+    this.total_health_points = options.total_health_points;
   }
 
   getStatus(): string {
-    const members = [
-      this.head,
-      this.left_arm,
-      this.left_leg,
-      this.right_arm,
-      this.right_leg,
-    ];
+    const members = Object.values(this.health.members);
 
-    return members.reduce((curr, member) => curr + member, 0) == 500
+    return members.reduce((curr, member) => curr + member, 0) ==
+      members.length * 100
       ? "normal"
       : "hurt";
   }
 
   getLife(): number {
-    const members = [
-      this.head,
-      this.left_arm,
-      this.left_leg,
-      this.right_arm,
-      this.right_leg,
-    ];
+    const members = Object.values(this.health.members);
 
-    return (
-      members.reduce((curr, member) => Number(curr) + Number(member), 0) / 5
-    );
+    const percent = members.reduce((c, m) => c + m, 0) / members.length / 100;
+
+    const life = this.total_health_points * percent;
+
+    return Math.floor(life);
   }
 
   loseLife(member, value) {
-    switch (member) {
-      case "left_arm":
-        this.left_arm -= value;
-        if (this.left_arm < 0) this.left_arm = 0;
-        break;
-      case "head":
-        this.head -= value;
-        if (this.head < 0) this.head = 0;
-        break;
-      case "right_arm":
-        this.right_arm -= value;
-        if (this.right_arm < 0) this.right_arm = 0;
-        break;
-      case "left_leg":
-        this.left_leg -= value;
-        if (this.left_leg < 0) this.left_leg = 0;
-        break;
-      case "right_leg":
-        this.right_leg -= value;
-        if (this.right_leg < 0) this.right_leg = 0;
-        break;
-    }
+    this.health.members[member] -= value;
+    if (this.health.members[member] < 0) this.health.members[member] = 0;
   }
 }
