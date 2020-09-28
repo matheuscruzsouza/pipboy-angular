@@ -67,9 +67,9 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker("vault", 409, 138, { found: true }),
-      new Marker("sanctuary", 476, 162, { found: true }),
-      new Marker("hospital", 1186, 386),
+      new Marker("vault", 409, 138, { found: false }),
+      new Marker("sanctuary", 476, 162, { found: false }),
+      // new Marker("hospital", 1186, 386),
     ];
   }
 
@@ -82,6 +82,7 @@ export class DataService {
   }
 
   getPlayerDestiny() {
+    return new Marker("destiny", 525, 152, { width: 12, height: 30 });
     return new Marker("destiny", 1186, 371, { width: 12, height: 30 });
   }
 

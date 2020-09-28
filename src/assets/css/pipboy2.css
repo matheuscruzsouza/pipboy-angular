@@ -81,6 +81,7 @@
 
 /* customize scrollbar css */
 #scrollbar-custom::-webkit-scrollbar {
+  display: none;
   width: 5px;
   background-color: #cccccc;
 }
