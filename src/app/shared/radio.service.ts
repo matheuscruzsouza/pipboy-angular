@@ -34,15 +34,13 @@ export class RadioService {
     ),
   ];
 
-  radio = this.RADIOS["off"];
+  radio: Radio;
   radio_change = new EventEmitter();
 
   constructor() {
     const radio_name = localStorage.getItem("radio") || "off";
 
-    this.setRadio(
-      Object.values(this.RADIOS).filter((radio) => radio.name == radio_name)[0]
-    );
+    this.setRadio(this.RADIOS.filter((radio) => radio.name == radio_name)[0]);
   }
 
   getRadioList() {
