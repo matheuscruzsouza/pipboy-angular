@@ -110,33 +110,34 @@ export class MapComponent implements OnInit {
 
     const destino = this.dataService.getPlayerDestiny();
 
-    if (position.x + 25 < destino.x && position.y < destino.y) {
-      const fake_marker = new Marker("destiny", position.x, position.y, {
-        width: 12,
-        height: 30,
-      });
+    const fake_marker = new Marker("destiny", position.x, position.y, {
+      width: 12,
+      height: 30,
+    });
 
-      this.drawElement(fake_marker, this.ctx_destino);
-    }
+    this.drawElement(fake_marker, this.ctx_destino);
   }
 
   calculeFakeMarker() {
     const element = this.canvas_destino.nativeElement;
     const parent = element.parentElement;
-    const left = parent.scrollLeft + parent.clientWidth;
-    const top = parent.scrollTop;
+
+    const r = parent.scrollLeft;
+    const l = parent.scrollLeft + parent.clientWidth;
+    const t = parent.scrollTop;
+    const b = parent.scrollTop + parent.clientHeight;
 
     const player = this.dataService.getPlayerPosition();
     const destino = this.dataService.getPlayerDestiny();
 
-    const cateto_adjacente = left;
-    const angulo_a = Math.atan2(destino.x - player.x, destino.y - player.y);
-    const angulo_b = 90 * (Math.PI / 180) - angulo_a;
-    const cateto_oposto = cateto_adjacente * Math.tan(angulo_b);
+    // const cateto_adjacente = left;
+    // const angulo_a = Math.atan2(destino.x - player.x, destino.y - player.y);
+    // const angulo_b = 90 * (Math.PI / 180) - angulo_a;
+    // const cateto_oposto = cateto_adjacente * Math.tan(angulo_b);
 
     const position = {
-      x: left > cateto_adjacente ? left : cateto_adjacente - 20,
-      y: top + 20 > cateto_oposto ? top + 20 : cateto_oposto,
+      x: l < destino.x ? l - 20 : destino.x < r ? r + 20 : destino.x,
+      y: destino.y < t ? t + 20 : b < destino.y ? b - 20 : destino.y - 0.1,
     };
 
     return position;

@@ -12,6 +12,8 @@ export class DataService {
 
   constructor() {
     this.addInventoryPlayer(new Pistol());
+    this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+    this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
     this.addInventoryPlayer(new Melee());
     console.log(this.getPlayerWeight());
   }
@@ -39,8 +41,16 @@ export class DataService {
   }
 
   getPlayerDestiny() {
-    return new Marker("destiny", 525, 152, { width: 12, height: 30 });
-    return new Marker("destiny", 1186, 371, { width: 12, height: 30 });
+    return new Marker("destiny", 525, 152, {
+      width: 12,
+      height: 30,
+      found: true,
+    });
+    // return new Marker("destiny", 1186, 371, {
+    //   width: 12,
+    //   height: 30,
+    //   found: true,
+    // });
   }
 
   addInventoryPlayer(item: any) {
@@ -76,5 +86,12 @@ export class DataService {
         curr + arr.reduce((curr, item) => curr + item.weight, 0),
       0
     );
+  }
+
+  getPlayerInventory(field: string) {
+    return this.player.inventory[field].reduce((r, a) => {
+      r[a.name + a.accuracy] = [...(r[a.name + a.accuracy] || []), a];
+      return r;
+    }, {});
   }
 }
