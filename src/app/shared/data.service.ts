@@ -63,7 +63,9 @@ export class DataService {
     console.log(ap, equiped.apCost);
 
     if (ap > equiped.apCost) {
-      equiped.fire();
+      try {
+        equiped.fire();
+      } catch (error) {}
       this.player.action_points -= equiped.apCost;
     }
   }
