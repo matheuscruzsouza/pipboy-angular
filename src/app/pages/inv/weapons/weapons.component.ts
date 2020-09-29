@@ -17,6 +17,7 @@ export class WeaponsComponent implements OnInit {
 
   ngOnInit(): void {
     this.weapons = this.dataService.player.inventory.weapon;
+    this.selected = this.dataService.player.equiped.hand;
   }
 
   isSelected(arma: Weapon) {

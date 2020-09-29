@@ -53,6 +53,7 @@ export class DataService {
 
   setWeapon(arma: Weapon) {
     this.player.equiped.hand = arma;
+    this.player_change.emit(this.player);
   }
 
   attack() {

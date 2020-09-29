@@ -15,6 +15,8 @@ export class StatusComponent implements OnInit, OnChanges, OnDestroy {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.player_status = this.dataService.player;
+
     this.subscriptions.add(
       this.dataService.player_change.subscribe((player) => {
         this.player_status = player;
