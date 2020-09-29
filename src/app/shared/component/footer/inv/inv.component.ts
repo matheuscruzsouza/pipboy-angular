@@ -22,7 +22,14 @@ export class FooterInvComponent implements AfterViewInit {
 
   private player: Player;
 
-  constructor(private dataService: DataService) {}
+  weight: number;
+  total_weight: number;
+
+  constructor(private dataService: DataService) {
+    this.weight = this.dataService.getPlayerWeight();
+
+    this.total_weight = 300;
+  }
 
   ngAfterViewInit(): void {
     this.setStatus(this.dataService.player);

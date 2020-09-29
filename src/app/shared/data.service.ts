@@ -13,6 +13,7 @@ export class DataService {
   constructor() {
     this.addInventoryPlayer(new Pistol());
     this.addInventoryPlayer(new Melee());
+    console.log(this.getPlayerWeight());
   }
 
   loseLife(member, value) {
@@ -64,5 +65,13 @@ export class DataService {
       equiped.fire();
       this.player.action_points -= equiped.apCost;
     }
+  }
+
+  getPlayerWeight() {
+    return Object.values(this.player.inventory).reduce(
+      (curr, arr: any[]) =>
+        curr + arr.reduce((curr, item) => curr + item.weight, 0),
+      0
+    );
   }
 }
