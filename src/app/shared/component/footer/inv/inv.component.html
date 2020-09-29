@@ -17,7 +17,14 @@
     <div class="ap-status">
       <div *ngIf="menu == 'weapons'">
         <img src="assets/images/HUD/Menu/icon_52.svg" width="30px" alt="Gun" />
-        <img src="assets/images/HUD/Menu/icon_26.svg" width="15px" alt="Aim" />
+        <img
+          src="assets/images/HUD/Menu/icon_26.svg"
+          width="15px"
+          alt="Aim"
+          style="margin: 3px 0px 3px 15px;"
+        />
+
+        {{player?.equiped?.hand?.damage}}
       </div>
 
       <div *ngIf="menu == 'apparel'">

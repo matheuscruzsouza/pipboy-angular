@@ -7,6 +7,7 @@ import {
   OnChanges,
 } from "@angular/core";
 import { DataService } from "../../../data.service";
+import { Player } from "src/app/shared/model/player";
 
 @Component({
   selector: "app-footer-status",
@@ -31,8 +32,9 @@ export class FooterStatusComponent implements AfterViewInit {
     });
   }
 
-  setStatus(player) {
+  setStatus(player: Player) {
     this.life = player.getLife();
+    this.action_points = player.action_points;
 
     this.complete.nativeElement.style.width = `${player.experience}%`;
   }

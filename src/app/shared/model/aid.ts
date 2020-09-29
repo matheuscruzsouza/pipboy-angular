@@ -1,3 +1,3 @@
-export class Aid {
+export abstract class Aid {
   constructor() {}
 }

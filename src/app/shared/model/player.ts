@@ -1,3 +1,10 @@
+import { Weapon } from "./weapon";
+import { Apparel } from "./apparel";
+import { Aid } from "./aid";
+import { Misc } from "./misc";
+import { Junk } from "./junk";
+import { Ammunition } from "./ammunition";
+
 export class Player {
   experience: number;
 
@@ -34,6 +41,24 @@ export class Player {
     inteligence: number;
     agility: number;
     luck: number;
+  };
+
+  inventory: {
+    weapon: Weapon[];
+    apparel: Apparel[];
+    aid: Aid[];
+    misc: Misc[];
+    junk: Junk[];
+    ammunition: Ammunition[];
+  };
+
+  equiped: {
+    hand: Weapon;
+    head: Apparel;
+    leftArm: Apparel;
+    rightArm: Apparel;
+    leftLeg: Apparel;
+    rightLeg: Apparel;
   };
 
   constructor(
@@ -77,6 +102,24 @@ export class Player {
       inteligence: options.inteligence,
       agility: options.agility,
       luck: options.luck,
+    };
+
+    this.inventory = {
+      weapon: [],
+      apparel: [],
+      aid: [],
+      misc: [],
+      junk: [],
+      ammunition: [],
+    };
+
+    this.equiped = {
+      hand: null,
+      head: null,
+      leftArm: null,
+      rightArm: null,
+      leftLeg: null,
+      rightLeg: null,
     };
 
     this.experience = options.experience;

@@ -1,2 +1,91 @@
-<p>weapons works!</p>
+<div class="wrapper row">
+  <div class="list">
+    <ul>
+      <li
+        *ngFor="let weapon of weapons"
+        [ngClass]="{'selected': isSelected(weapon), 'preview': isPreview(weapon)}"
+        (click)="select(weapon)"
+        (mouseover)="setPreview(weapon)"
+        (mouseout)="clearPreview()"
+      >
+        {{weapon.name}}
+      </li>
+    </ul>
+  </div>
+  <div class="detail">
+    <div class="image">
+      <img
+        src="{{ preview?.imageSRC || selected?.imageSRC }}"
+        alt="weapon image"
+        *ngIf="selected || preview"
+        style="width: 85%; display: block; margin: auto;"
+      />
+    </div>
+    <div class="data">
+      <div class="row" style="margin-bottom: 4px;">
+        <div class="line attention" style="width: 70%; margin: 0px -10px;">
+          Damage
+        </div>
+        <div
+          class="line attention"
+          style="
+            width: 36.5%;
+            margin: 0px -10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <img
+            src="assets/images/HUD/Menu/icon_26.svg"
+            alt="damage"
+            width="21"
+          />
+          {{this.preview?.damage || this.selected?.damage}}
+        </div>
+      </div>
+
+      <div class="row line attention">
+        <div>
+          <img
+            src="assets/images/HUD/Inventory/icon_62.svg"
+            width="21"
+            alt="ammo"
+          />
+          {{this.preview?.ammunition?.type || this.selected?.ammunition?.type}}
+        </div>
+        <div>
+          {{this.preview?.ammunition?.quantity ||
+          this.selected?.ammunition?.quantity || ''}}
+        </div>
+      </div>
+
+      <div class="row line">
+        <div>Fire Rate</div>
+        <div>{{this.preview?.fireRate || this.selected?.fireRate}}</div>
+      </div>
+
+      <div class="row line">
+        <div>Range</div>
+        <div>{{this.preview?.range || this.selected?.range}}</div>
+      </div>
+
+      <div class="row line">
+        <div>Accuracy</div>
+        <div>{{this.preview?.accuracy || this.selected?.accuracy}}</div>
+      </div>
+
+      <div class="row line">
+        <div>Weight</div>
+        <div>{{this.preview?.weight || this.selected?.weight}}</div>
+      </div>
+
+      <div class="row line">
+        <div>Value</div>
+        <div>{{this.preview?.value || this.selected?.value}}</div>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer-inv menu="weapons"></app-footer-inv>

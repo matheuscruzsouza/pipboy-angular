@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="511px"
+   height="515px"
+   viewBox="-245.416204834 -246.749988556 510.61619339 514.767544556"
+   id="svg13"
+   sodipodi:docname="icon_62.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="836"
+     inkscape:window-height="480"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="0.45825243"
+     inkscape:cx="255.5"
+     inkscape:cy="257.5"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg13" />
+  <defs
+     id="defs5">
+    <g
+       id="c62">
+      <path
+         fill="#ffffff"
+         stroke="none"
+         d="M5.4 -9.15 L5.4 -4.05 Q-2.0 -3.8 -4.2 -4.05 -5.4 -4.15 -7.4 -5.4 L-9.2 -6.6 -7.5 -7.75 Q-5.5 -8.95 -4.2 -9.15 L1.45 -9.25 5.4 -9.15 M9.25 -4.05 L6.6 -4.05 6.6 -9.15 9.25 -9.15 9.25 -4.05 M5.4 -2.55 L5.4 2.55 Q-2.0 2.8 -4.2 2.55 -5.4 2.45 -7.4 1.2 L-9.2 0.0 -7.5 -1.15 Q-5.5 -2.35 -4.2 -2.55 L1.45 -2.65 5.4 -2.55 M9.25 -2.55 L9.25 2.55 6.6 2.55 6.6 -2.55 9.25 -2.55 M5.4 9.15 Q-2.0 9.35 -4.2 9.15 -5.4 9.05 -7.4 7.8 L-9.2 6.55 -7.5 5.45 Q-5.5 4.25 -4.2 4.05 L1.45 3.95 5.4 4.05 5.4 9.15 M9.25 9.15 L6.6 9.15 6.6 4.05 9.25 4.05 9.25 9.15"
+         id="path2" />
+    </g>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Colorize"
+       id="filter4509">
+      <feComposite
+         in2="SourceGraphic"
+         operator="arithmetic"
+         k1="0"
+         k2="1"
+         result="composite1"
+         id="feComposite4495" />
+      <feColorMatrix
+         in="composite1"
+         values="1"
+         type="saturate"
+         result="colormatrix1"
+         id="feColorMatrix4497" />
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,255,0)"
+         result="flood1"
+         id="feFlood4499" />
+      <feBlend
+         in="flood1"
+         in2="colormatrix1"
+         mode="multiply"
+         result="blend1"
+         id="feBlend4501" />
+      <feBlend
+         in2="blend1"
+         mode="screen"
+         result="blend2"
+         id="feBlend4503" />
+      <feColorMatrix
+         in="blend2"
+         values="1"
+         type="saturate"
+         result="colormatrix2"
+         id="feColorMatrix4505" />
+      <feComposite
+         in="colormatrix2"
+         in2="SourceGraphic"
+         operator="in"
+         k2="1"
+         result="composite2"
+         id="feComposite4507" />
+    </filter>
+  </defs>
+  <g
+     id="g11"
+     style="fill:#00ff00;filter:url(#filter4509)">
+    <g
+       id="g9"
+       style="fill:#00ff00">
+      <use
+         transform="matrix(27.675674,0,0,27.675674,9.2,9.25)"
+         xlink:href="#c62"
+         id="use7"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         style="fill:#00ff00" />
+    </g>
+  </g>
+</svg>

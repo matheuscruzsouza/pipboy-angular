@@ -1,3 +1,5 @@
-export class Misc {
+export abstract class Misc {
+  readonly baseClass = "misc";
+
   constructor() {}
 }

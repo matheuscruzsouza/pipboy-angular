@@ -38,12 +38,15 @@ export class FooterInvComponent implements AfterViewInit {
 
   setStatus(player) {
     this.player = player;
-    this.complete.nativeElement.style.width = `${player.getLife()}%`;
+
+    if (this.complete)
+      this.complete.nativeElement.style.width = `${player.getLife()}%`;
   }
 
   checkHeal(value: number) {
-    this.possibility.nativeElement.style.width = `${
-      this.player.getLife() + value
-    }%`;
+    if (this.possibility)
+      this.possibility.nativeElement.style.width = `${
+        this.player.getLife() + value
+      }%`;
   }
 }
