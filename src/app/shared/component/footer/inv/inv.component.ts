@@ -20,7 +20,7 @@ export class FooterInvComponent implements AfterViewInit {
   @ViewChild("complete") complete: ElementRef;
   @ViewChild("possibility") possibility: ElementRef;
 
-  private player: Player;
+  player: Player;
 
   weight: number;
   total_weight: number;
