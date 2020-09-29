@@ -97,6 +97,7 @@ export class WeaponsComponent implements OnInit {
 
   select(arma: Weapon) {
     this.selected = arma;
+    this.dataService.loseAP(10);
     this.dataService.player.equiped.hand = arma;
   }
 

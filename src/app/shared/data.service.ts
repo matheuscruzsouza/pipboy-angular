@@ -68,16 +68,22 @@ export class DataService {
 
   attack() {
     const equiped = this.player.equiped.hand;
+
+    if (this.loseAP(equiped.apCost)) {
+      equiped.fire();
+    }
+  }
+
+  loseAP(value: number) {
     const ap = this.player.action_points;
 
-    console.log(ap, equiped.apCost);
+    if (ap > value) {
+      console.log(ap - value > 0 ? ap - value : 0);
 
-    if (ap > equiped.apCost) {
-      try {
-        equiped.fire();
-      } catch (error) {}
-      this.player.action_points -= equiped.apCost;
+      this.player.action_points = ap - value > 0 ? ap - value : 0;
+      return true;
     }
+    return false;
   }
 
   getPlayerWeight() {
