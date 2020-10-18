@@ -1,6 +1,14 @@
-import { Component, OnInit, Input, OnChanges, OnDestroy } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  OnDestroy,
+  ViewChild,
+} from "@angular/core";
 import { DataService } from "src/app/shared/data.service";
 import { Subscriber, Subscription } from "rxjs";
+import { VaultBoyComponent } from "src/app/shared/component/vault-boy/vault_boy.component";
 
 @Component({
   selector: "app-status",
@@ -12,6 +20,8 @@ export class StatusComponent implements OnInit, OnChanges, OnDestroy {
 
   private subscriptions = new Subscription();
 
+  @ViewChild("vaultboy") vaultboy: VaultBoyComponent;
+
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -20,6 +30,8 @@ export class StatusComponent implements OnInit, OnChanges, OnDestroy {
     this.subscriptions.add(
       this.dataService.player_change.subscribe((player) => {
         this.player_status = player;
+
+        this.vaultboy.updateStatus();
       })
     );
   }

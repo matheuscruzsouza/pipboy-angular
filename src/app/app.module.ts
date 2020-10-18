@@ -12,6 +12,8 @@ import { MapComponent } from "./pages/map/map.component";
 import { DataComponent } from "./pages/data/data.component";
 import { RadioComponent } from "./pages/radio/radio.component";
 import { MenuComponent } from "./shared/component/header/menu/menu.component";
+import { HttpClientModule } from "@angular/common/http";
+import { Interceptor } from "./core/interceptor.module";
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { MenuComponent } from "./shared/component/header/menu/menu.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    Interceptor,
+    HttpClientModule,
     StatModule,
     InvModule,
     FooterModule,

@@ -63,20 +63,24 @@ export class Player {
 
   constructor(
     options = {
-      head: 100,
-      left_arm: 100,
-      right_arm: 100,
-      left_leg: 100,
-      right_leg: 100,
-      irraidated: 0,
-      Addicted: 0,
-      strength: 0,
-      perception: 0,
-      endurance: 0,
-      charisma: 0,
-      inteligence: 0,
-      agility: 0,
-      luck: 0,
+      health: {
+        head: 100,
+        leftarm: 100,
+        leftleg: 100,
+        rightarm: 100,
+        rightleg: 100,
+        addicted: 0,
+        irradiated: 0,
+      },
+      atribute: {
+        strength: 0,
+        perception: 0,
+        endurance: 0,
+        charisma: 0,
+        inteligence: 0,
+        agility: 0,
+        luck: 0,
+      },
       experience: 0,
       total_action_points: 50,
       total_health_points: 150,
@@ -84,24 +88,24 @@ export class Player {
   ) {
     this.health = {
       members: {
-        head: options.head,
-        left_arm: options.left_arm,
-        right_arm: options.right_arm,
-        left_leg: options.left_leg,
-        right_leg: options.right_leg,
+        head: options.health.head,
+        left_arm: options.health.leftarm,
+        right_arm: options.health.rightarm,
+        left_leg: options.health.leftleg,
+        right_leg: options.health.rightleg,
       },
-      irraidated: options.irraidated,
-      Addicted: options.Addicted,
+      irraidated: options.health.irradiated,
+      Addicted: options.health.addicted,
     };
 
     this.special = {
-      strength: options.strength,
-      perception: options.perception,
-      endurance: options.endurance,
-      charisma: options.charisma,
-      inteligence: options.inteligence,
-      agility: options.agility,
-      luck: options.luck,
+      strength: options.atribute.strength,
+      perception: options.atribute.perception,
+      endurance: options.atribute.endurance,
+      charisma: options.atribute.charisma,
+      inteligence: options.atribute.inteligence,
+      agility: options.atribute.agility,
+      luck: options.atribute.luck,
     };
 
     this.inventory = {

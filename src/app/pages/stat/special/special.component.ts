@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { DataService } from "src/app/shared/data.service";
 
 @Component({
   selector: "app-special",
@@ -50,7 +51,7 @@ export class SpecialComponent implements OnInit {
   img: string;
   text: string;
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     console.log(this.img, this.text);
@@ -67,6 +68,6 @@ export class SpecialComponent implements OnInit {
   }
 
   getValue(key) {
-    return 0;
+    return this.dataService.player.special[key];
   }
 }

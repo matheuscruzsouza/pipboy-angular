@@ -43,6 +43,7 @@ export class VaultBoyComponent implements OnChanges, AfterViewInit {
   }
 
   updateStatus() {
+    this.status = this.dataService.player;
     const members = this.status.health.members;
 
     this.head = members.head < 10 ? "crippled" : "normal";

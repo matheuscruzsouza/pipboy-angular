@@ -1,21 +1,49 @@
 import { Injectable, EventEmitter } from "@angular/core";
 import { Player } from "./model/player";
 import { Marker } from "./model/marker";
-import { Pistol, Shotgun, Weapon, Melee } from "./model/weapon";
+import { Pistol, Weapon, Melee } from "./model/weapon";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "src/environments/environment";
+import { AuthService } from "../core/auth.service";
 
 @Injectable({
   providedIn: "root",
 })
 export class DataService {
-  player = new Player();
+  player: Player;
   player_change = new EventEmitter<Player>();
 
-  constructor() {
-    this.addInventoryPlayer(new Pistol());
-    this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
-    this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
-    this.addInventoryPlayer(new Melee());
-    console.log(this.getPlayerWeight());
+  constructor(private http: HttpClient, private authService: AuthService) {
+    this.player = new Player();
+
+    this.authService.checkCredentials();
+
+    this.listPlayer("001").subscribe((players: any[]) => {
+      players.forEach((p) => {
+        const player = new Player({
+          health: p.health,
+          atribute: p.atribute,
+          experience: p.experience,
+          total_action_points: 50,
+          total_health_points: 150,
+        });
+        this.player = player;
+      });
+
+      this.addInventoryPlayer(new Pistol());
+      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+      this.addInventoryPlayer(new Melee());
+      console.log(this.getPlayerWeight());
+
+      this.player_change.emit(this.player);
+    });
+  }
+
+  listPlayer(oidpessoa: string) {
+    return this.http.get(
+      environment.BACKEND_API + `/fallout/player?pessoa=${oidpessoa}`
+    );
   }
 
   loseLife(member, value) {
@@ -69,7 +97,7 @@ export class DataService {
   attack() {
     const equiped = this.player.equiped.hand;
 
-    if (this.loseAP(equiped.apCost)) {
+    if (equiped && this.loseAP(equiped.apCost)) {
       equiped.fire();
     }
   }
