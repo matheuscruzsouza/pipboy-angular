@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Monofonto';
+    src: url('Monofonto-Regular.woff2') format('woff2'),
+        url('Monofonto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
