@@ -32,6 +32,7 @@ export class StatusComponent implements OnInit, OnChanges, OnDestroy {
         this.player_status = player;
 
         this.vaultboy.updateStatus();
+        this.vaultboy.updatePercentage();
       })
     );
   }
