@@ -40,7 +40,7 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.canvas.nativeElement.style.background = `url("/assets/images/map/background_green.png") no-repeat center`;
+    this.canvas.nativeElement.style.background = `url("assets/images/map/background_green.png") no-repeat center`;
 
     this.ctx = this.canvas.nativeElement.getContext("2d");
     this.ctx_destino = this.canvas_destino.nativeElement.getContext("2d");
