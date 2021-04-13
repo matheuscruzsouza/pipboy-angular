@@ -23,5 +23,17 @@
           background-color: var(--text-color)
           color: var(--background-color)
 
+  .special-data
+    .text
+      width: 35vw
 
+@media only screen and (max-width: 600px)
+  :host
+    flex-direction: column-reverse
 
+    .special-list
+      width: 85vw
+
+    .special-data
+      .text
+        width: 85vw

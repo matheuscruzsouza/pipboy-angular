@@ -14,6 +14,8 @@ import { RadioComponent } from "./pages/radio/radio.component";
 import { MenuComponent } from "./shared/component/header/menu/menu.component";
 import { HttpClientModule } from "@angular/common/http";
 import { Interceptor } from "./core/interceptor.module";
+import { VideoModule } from "./shared/component/video-player/video.module";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { Interceptor } from "./core/interceptor.module";
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     Interceptor,
     HttpClientModule,
     StatModule,
     InvModule,
     FooterModule,
+    VideoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
