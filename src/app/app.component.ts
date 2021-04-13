@@ -27,11 +27,12 @@ export class AppComponent implements AfterViewInit {
     this.playAudio(this.radioService.radio.url);
 
     this.radioService.radio_change.subscribe((radio: Radio) => {
-      console.log(this.video);
-
-      if (!radio.youtube) {
+      if (radio.url == null) {
+        this.radio.pause();
+        this.video.stopVideo();
+      } else if (!radio.youtube) {
         this.playAudio(radio.url);
-      } else {
+      } else if (radio.youtube) {
         this.playVideo(radio.url);
       }
     });

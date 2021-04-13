@@ -6,7 +6,7 @@ import { Radio } from "./model/radio";
 })
 export class RadioService {
   RADIOS = [
-    new Radio("Desligado", null, false),
+    new Radio("Desligado", null, null),
     new Radio("Main Station", "http://fallout.fm:8000/falloutfm1.ogg", false),
     new Radio(
       "Diamond City Radio",
