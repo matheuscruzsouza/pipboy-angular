@@ -10,7 +10,7 @@
 }
 
 .weapon {
-  background: url("/assets/images/HUD/Menu/icon_52.svg") center no-repeat;
+  background: url("/pipboy-angular/assets/images/HUD/Menu/icon_52.svg") center no-repeat;
   background-size: 70px;
   width: 100px;
   height: 65px;
@@ -18,7 +18,7 @@
 }
 
 .aim {
-  background: url("/assets/images/HUD/Menu/icon_26.svg") center no-repeat;
+  background: url("/pipboy-angular/assets/images/HUD/Menu/icon_26.svg") center no-repeat;
   background-size: 20px;
   background-position-y: 8px;
   margin: 0 5px;
@@ -30,7 +30,7 @@
 }
 
 .helmet {
-  background: url("/assets/images/HUD/Menu/icon_54.svg") center no-repeat;
+  background: url("/pipboy-angular/assets/images/HUD/Menu/icon_54.svg") center no-repeat;
   background-size: 70px;
   width: 85px;
   height: 65px;
@@ -38,7 +38,7 @@
 }
 
 .shield {
-  background: url("/assets/images/HUD/Menu/icon_14.svg") center no-repeat;
+  background: url("/pipboy-angular/assets/images/HUD/Menu/icon_14.svg") center no-repeat;
   background-size: 20px;
   background-position-y: 6px;
   margin: 0 2.5px 0 5px;
@@ -49,7 +49,7 @@
 }
 
 .voltage {
-  background: url("/assets/images/HUD/Menu/icon_20.svg") center no-repeat;
+  background: url("/pipboy-angular/assets/images/HUD/Menu/icon_20.svg") center no-repeat;
   background-size: 18px;
   background-position-y: 6px;
   margin: 0 2.5px;
@@ -60,7 +60,7 @@
 }
 
 .nuclear {
-  background: url("/assets/images/HUD/Menu/icon_24.svg") center no-repeat;
+  background: url("/pipboy-angular/assets/images/HUD/Menu/icon_24.svg") center no-repeat;
   background-size: 20px;
   background-position-y: 8px;
   margin: 0 2.5px;
