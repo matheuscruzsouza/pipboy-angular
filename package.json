@@ -8,7 +8,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start": "node server.js",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --prod",
+    "buildProd": "ng build --prod --base-href=/pipboy-angular/"
   },
   "private": true,
   "dependencies": {
