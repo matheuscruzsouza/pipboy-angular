@@ -19,9 +19,13 @@ export class AppComponent implements AfterViewInit {
 
   src = "";
 
+  onBoot = true;
+
   @ViewChild(VideoComponent, { static: false }) video: VideoComponent;
 
-  constructor(private radioService: RadioService) {}
+  constructor(private radioService: RadioService) {
+    setTimeout((_) => this.onBoot = false, 16000);
+  }
 
   ngAfterViewInit(): void {
     this.playAudio(this.radioService.radio.url);
