@@ -9,6 +9,16 @@
   --section-color: #004100
   --background-color: #000000
 
+  // --cursor-url: url('/assets/images/cursor.png')
+  // --weapon-url: url('/assets/images/HUD/Menu/icon_52.svg')
+  // --aim-url: url('/assets/images/HUD/Menu/icon_26.svg')
+  // --helmet-url: url('/assets/images/HUD/Menu/icon_54.svg')
+  // --shield-url: url('/assets/images/HUD/Menu/icon_14.svg')
+  // --voltage-url: url('/assets/images/HUD/Menu/icon_20.svg')
+  // --nuclear-url: url('/assets/images/HUD/Menu/icon_24.svg')
+
+  // --boot-url: url('/assets/images/pipboy1x_green.gif')
+
 *
   -webkit-touch-callout: none
   -webkit-user-select: none
@@ -24,7 +34,10 @@ body
   // background-color: var(--background-color)
   height: 95vh
   filter: blur(1)
-  cursor: url('/assets/images/cursor.png'), auto
+  cursor: var(--cursor-url), auto
+
+  p
+    color: var(--text-color)
 
 .row
   display: flex

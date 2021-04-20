@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { timeout } from 'rxjs/operators';
 import { VideoComponent } from './shared/component/video-player/video.component';
 import { Radio } from './shared/model/radio';
@@ -24,6 +24,8 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(VideoComponent, { static: false }) video: VideoComponent;
 
   constructor(private radioService: RadioService) {
+    this.updateStyleUrl();
+
     setTimeout((_) => (this.onBoot = false), 16000);
   }
 
@@ -68,5 +70,17 @@ export class AppComponent implements AfterViewInit {
     } else {
       this.video.stopVideo();
     }
+  }
+
+  updateStyleUrl() {
+    document.documentElement.ownerDocument.body.style.setProperty(
+      '--cursor-url',
+      `url('${document.baseURI}assets/images/cursor.png')`
+    );
+
+    document.documentElement.ownerDocument.body.style.setProperty(
+      '--boot-url',
+      `url('${document.baseURI}assets/images/pipboy1x_green.gif')`
+    );
   }
 }

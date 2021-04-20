@@ -2,17 +2,23 @@
   <ul>
     <li
       [routerLink]="[{outlets: {stat: ['status']}}]"
+      skipLocationChange
       routerLinkActive="active"
     >
       STATUS
     </li>
     <li
       [routerLink]="[{outlets: {stat: ['special']}}]"
+      skipLocationChange
       routerLinkActive="active"
     >
       SPECIAL
     </li>
-    <li [routerLink]="[{outlets: {stat: ['perks']}}]" routerLinkActive="active">
+    <li
+      [routerLink]="[{outlets: {stat: ['perks']}}]"
+      skipLocationChange
+      routerLinkActive="active"
+    >
       PERKS
     </li>
   </ul>

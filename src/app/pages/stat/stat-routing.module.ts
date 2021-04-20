@@ -1,36 +1,36 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule } from '@angular/router';
 
-import { StatComponent } from "./stat.component";
-import { StatusComponent } from "./status/status.component";
-import { SpecialComponent } from "./special/special.component";
-import { PerksComponent } from "./perks/perks.component";
+import { StatComponent } from './stat.component';
+import { StatusComponent } from './status/status.component';
+import { SpecialComponent } from './special/special.component';
+import { PerksComponent } from './perks/perks.component';
 
 const routes: Routes = [
   {
-    path: "stat",
+    path: 'stat',
     component: StatComponent,
     children: [
       {
-        path: "",
-        pathMatch: "full",
-        redirectTo: "status",
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'status',
       },
       {
-        path: "status",
+        path: 'status',
         component: StatusComponent,
-        outlet: "stat",
+        outlet: 'stat',
       },
       {
-        path: "special",
+        path: 'special',
         component: SpecialComponent,
-        outlet: "stat",
+        outlet: 'stat',
       },
       {
-        path: "perks",
+        path: 'perks',
         component: PerksComponent,
-        outlet: "stat",
+        outlet: 'stat',
       },
     ],
   },

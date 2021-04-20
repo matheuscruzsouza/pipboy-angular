@@ -5,20 +5,20 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
-} from "@angular/core";
-import { DataService } from "../../../data.service";
-import { Player } from "../../../model/player";
+} from '@angular/core';
+import { DataService } from '../../../data.service';
+import { Player } from '../../../model/player';
 
 @Component({
-  selector: "app-footer-inv",
-  templateUrl: "./inv.component.html",
-  styleUrls: ["./inv.component.sass"],
+  selector: 'app-footer-inv',
+  templateUrl: './inv.component.html',
+  styleUrls: ['./inv.component.sass'],
 })
 export class FooterInvComponent implements AfterViewInit {
   @Input() menu: string;
 
-  @ViewChild("complete") complete: ElementRef;
-  @ViewChild("possibility") possibility: ElementRef;
+  @ViewChild('complete') complete: ElementRef;
+  @ViewChild('possibility') possibility: ElementRef;
 
   player: Player;
 
