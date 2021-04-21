@@ -1,13 +1,13 @@
-import { Injectable, EventEmitter } from "@angular/core";
-import { Player } from "./model/player";
-import { Marker } from "./model/marker";
-import { Pistol, Weapon, Melee } from "./model/weapon";
-import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
-import { AuthService } from "../core/auth.service";
+import { Injectable, EventEmitter } from '@angular/core';
+import { Player } from './model/player';
+import { Marker } from './model/marker';
+import { Pistol, Weapon, Melee } from './model/weapon';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { AuthService } from '../core/auth.service';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class DataService {
   player: Player;
@@ -18,26 +18,62 @@ export class DataService {
 
     this.authService.checkCredentials();
 
-    this.listPlayer("001").subscribe((players: any[]) => {
-      players.forEach((p) => {
+    this.listPlayer('001').subscribe(
+      (players: any[]) => {
+        players.forEach((p) => {
+          const player = new Player({
+            health: p.health,
+            atribute: p.atribute,
+            experience: p.experience,
+            total_action_points: 50,
+            total_health_points: 150,
+          });
+          this.player = player;
+        });
+
+        this.addInventoryPlayer(new Pistol());
+        this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+        this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+        this.addInventoryPlayer(new Melee());
+        console.log(this.getPlayerWeight());
+
+        this.player_change.emit(this.player);
+      },
+      () => {
         const player = new Player({
-          health: p.health,
-          atribute: p.atribute,
-          experience: p.experience,
+          health: {
+            head: 100,
+            leftarm: 100,
+            rightarm: 100,
+            leftleg: 100,
+            rightleg: 100,
+            addicted: 0,
+            irradiated: 0,
+          },
+          atribute: {
+            strength: 1,
+            perception: 2,
+            endurance: 5,
+            charisma: 0,
+            inteligence: 5,
+            agility: 5,
+            luck: 5,
+          },
+          experience: 15,
           total_action_points: 50,
           total_health_points: 150,
         });
         this.player = player;
-      });
 
-      this.addInventoryPlayer(new Pistol());
-      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
-      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
-      this.addInventoryPlayer(new Melee());
-      console.log(this.getPlayerWeight());
+        this.addInventoryPlayer(new Pistol());
+        this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+        this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+        this.addInventoryPlayer(new Melee());
+        console.log(this.getPlayerWeight());
 
-      this.player_change.emit(this.player);
-    });
+        this.player_change.emit(this.player);
+      }
+    );
   }
 
   listPlayer(oidpessoa: string) {
@@ -54,14 +90,14 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker("vault", 409, 138, { found: false }),
-      new Marker("sanctuary", 476, 162, { found: false }),
+      new Marker('vault', 409, 138, { found: false }),
+      new Marker('sanctuary', 476, 162, { found: false }),
       // new Marker("hospital", 1186, 386),
     ];
   }
 
   getPlayerPosition() {
-    return new Marker("player", 370.1, 121.5, {
+    return new Marker('player', 370.1, 121.5, {
       width: 15,
       height: 20,
       hud: true,
@@ -69,7 +105,7 @@ export class DataService {
   }
 
   getPlayerDestiny() {
-    return new Marker("destiny", 525, 152, {
+    return new Marker('destiny', 525, 152, {
       width: 12,
       height: 30,
       found: true,

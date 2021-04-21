@@ -1,4 +1,4 @@
-name: workflow name
+name: Deploy to gh-pages
 
 on:
   push:
@@ -39,8 +39,8 @@ jobs:
       - name: copy file
         uses: canastro/copy-file-action@master
         with:
-          source: 'deploy_dist/pipboy/index.html'
-          target: 'deploy_dist/pipboy/404.html'
+          source: deploy_dist/pipboy/index.html
+          target: deploy_dist/pipboy/404.html
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
