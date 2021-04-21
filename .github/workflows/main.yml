@@ -39,8 +39,8 @@ jobs:
       - name: copy file
         uses: canastro/copy-file-action@master
         with:
-          source: '/home/runner/work/pipboy-angular/pipboy-angular/deploy_dist/index.html'
-          target: '/home/runner/work/pipboy-angular/pipboy-angular/deploy_dist/404.html'
+          source: '/home/runner/work/pipboy-angular/pipboy-angular/deploy_dist/pipboy/index.html'
+          target: '/home/runner/work/pipboy-angular/pipboy-angular/deploy_dist/pipboy/404.html'
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
