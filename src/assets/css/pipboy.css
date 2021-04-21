@@ -20,7 +20,7 @@ body {
 }
 
 .screen .color-pulse {
-  animation: divColorPulse 5s infinite ease-in-out;
+  animation: divColorPulse 10s infinite ease-in-out;
 }
 
 .screen:before {

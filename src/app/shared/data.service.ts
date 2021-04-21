@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Player } from './model/player';
 import { Marker } from './model/marker';
-import { Pistol, Weapon, Melee } from './model/weapon';
+import { Pistol, Weapon, Melee, Shotgun } from './model/weapon';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AuthService } from '../core/auth.service';
@@ -68,6 +68,7 @@ export class DataService {
         this.addInventoryPlayer(new Pistol());
         this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
         this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+        this.addInventoryPlayer(new Shotgun());
         this.addInventoryPlayer(new Melee());
         console.log(this.getPlayerWeight());
 
