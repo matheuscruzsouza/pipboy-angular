@@ -91,12 +91,13 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker('Vault 101', 'vault', 409, 138, { found: false }),
-      new Marker('Sanctuary', 'sanctuary', 476, 162, { found: false }),
+      new Marker('Vault 101', 'vault', 409, 138, { found: false, travel: true }),
+      new Marker('Sanctuary', 'sanctuary', 476, 162, { found: false, travel: true }),
       new Marker('Red Rocket gas station', 'red_rocket', 547, 213, { 
         width: 33,
         height: 33,
-        found: false
+        found: false, 
+        travel: true
       }),
       // new Marker("hospital", 1186, 386),
     ];

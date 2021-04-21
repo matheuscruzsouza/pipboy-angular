@@ -153,7 +153,16 @@ export class MapComponent implements OnInit {
 
     for (var i = 0; i < items.length; i++) {
       if (items[i].isPointInside(mouseX, mouseY)) {
-        confirm("Do you realy wanna travel to " + items[i].getName() + " location? ");
+        if (items[i].travel) {
+          if (confirm("Do you realy wanna travel to " + items[i].getName() + " location? ")) {
+            items[i].found = true;
+            this.clearCanvas();
+  
+            items.forEach(element => {
+              this.drawElement(element);
+            });
+          }
+        }
       }
     }
   }

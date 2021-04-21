@@ -8,6 +8,7 @@ export class Marker {
 
   found: boolean;
   hud: boolean;
+  travel: boolean;
 
   constructor(
     name: string,
@@ -19,6 +20,7 @@ export class Marker {
       height?: number;
       found?: boolean;
       hud?: boolean;
+      travel?: boolean;
     }
   ) {
     this.name = name;
@@ -30,6 +32,7 @@ export class Marker {
 
     this.found = options?.found || false;
     this.hud = options?.hud || false;
+    this.travel = options?.travel || false;
 
     if (!this.width && !this.height) {
       const img = new Image();
