@@ -36,14 +36,14 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
+      - name: copy file
+        uses: canastro/copy-file-action@master
+        with:
+          source: '/home/runner/work/pipboy-angular/pipboy-angular/deploy_dist/index.html'
+          target: '/home/runner/work/pipboy-angular/pipboy-angular/deploy_dist/404.html'
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: deploy_dist/pipboy
-      - name: copy file
-        uses: canastro/copy-file-action@master
-        with:
-          source: 'index.html'
-          target: '404.html'
