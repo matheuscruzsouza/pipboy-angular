@@ -26,7 +26,11 @@ export class AppComponent implements AfterViewInit {
   constructor(private radioService: RadioService) {
     this.updateStyleUrl();
 
-    setTimeout((_) => (this.onBoot = false), 16000);
+    if (JSON.parse(sessionStorage.getItem("unload") || "true")) {
+      setTimeout((_) => {this.onBoot = false; sessionStorage.setItem("unload", "false");}, 16000);
+    } else {
+      this.onBoot = false;
+    }
   }
 
   ngAfterViewInit(): void {

@@ -91,14 +91,19 @@ export class DataService {
 
   getPlayerLocations() {
     return [
-      new Marker('vault', 409, 138, { found: false }),
-      new Marker('sanctuary', 476, 162, { found: false }),
+      new Marker('Vault 101', 'vault', 409, 138, { found: false }),
+      new Marker('Sanctuary', 'sanctuary', 476, 162, { found: false }),
+      new Marker('Red Rocket gas station', 'red_rocket', 547, 213, { 
+        width: 33,
+        height: 33,
+        found: false
+      }),
       // new Marker("hospital", 1186, 386),
     ];
   }
 
   getPlayerPosition() {
-    return new Marker('player', 370.1, 121.5, {
+    return new Marker('', 'player', 370.1, 121.5, {
       width: 15,
       height: 20,
       hud: true,
@@ -106,7 +111,7 @@ export class DataService {
   }
 
   getPlayerDestiny() {
-    return new Marker('destiny', 525, 152, {
+    return new Marker('', 'destiny', 525, 152, {
       width: 12,
       height: 30,
       found: true,

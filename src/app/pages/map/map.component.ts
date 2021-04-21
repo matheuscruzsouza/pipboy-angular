@@ -4,20 +4,20 @@ import {
   ViewChild,
   ElementRef,
   HostListener,
-} from "@angular/core";
-import { DataService } from "src/app/shared/data.service";
-import { Marker } from "src/app/shared/model/marker";
+} from '@angular/core';
+import { DataService } from 'src/app/shared/data.service';
+import { Marker } from 'src/app/shared/model/marker';
 
 @Component({
-  selector: "app-map",
-  templateUrl: "./map.component.html",
-  styleUrls: ["./map.component.sass"],
+  selector: 'app-map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.sass'],
 })
 export class MapComponent implements OnInit {
-  @ViewChild("canvas", { static: true })
+  @ViewChild('canvas', { static: true })
   canvas: ElementRef<HTMLCanvasElement>;
 
-  @ViewChild("destino", { static: true })
+  @ViewChild('destino', { static: true })
   canvas_destino: ElementRef<HTMLCanvasElement>;
 
   private ctx: CanvasRenderingContext2D;
@@ -42,8 +42,8 @@ export class MapComponent implements OnInit {
   ngOnInit(): void {
     this.canvas.nativeElement.style.background = `url("assets/images/map/background_green.png") no-repeat center`;
 
-    this.ctx = this.canvas.nativeElement.getContext("2d");
-    this.ctx_destino = this.canvas_destino.nativeElement.getContext("2d");
+    this.ctx = this.canvas.nativeElement.getContext('2d');
+    this.ctx_destino = this.canvas_destino.nativeElement.getContext('2d');
 
     this.clearCanvas();
 
@@ -86,23 +86,11 @@ export class MapComponent implements OnInit {
   }
 
   drawImageActualSize(img, marker: Marker, ctx: CanvasRenderingContext2D) {
-    const item = marker.width
-      ? ctx.drawImage(
-          img,
-          marker.x - marker.width / 2,
-          marker.y - marker.height / 2,
-          marker.width,
-          marker.height
-        )
-      : ctx.drawImage(
-          img,
-          marker.x - img.width / 6 / 2,
-          marker.y - img.height / 6 / 2,
-          img.width / 6,
-          img.height / 6
-        );
+    marker.width
+      ? ctx.drawImage(img, marker.x, marker.y, marker.width, marker.height)
+      : ctx.drawImage(img, marker.x, marker.y, img.width / 6, img.height / 6);
 
-    this.ITEMS[marker.name] = item;
+    this.ITEMS[marker.name] = marker;
   }
 
   calculeMidPoint(a: Marker, b: Marker) {
@@ -110,7 +98,7 @@ export class MapComponent implements OnInit {
 
     const destino = this.dataService.getPlayerDestiny();
 
-    const fake_marker = new Marker("destiny", position.x, position.y, {
+    const fake_marker = new Marker('destiny', 'destiny', position.x, position.y, {
       width: 12,
       height: 30,
     });
@@ -153,6 +141,21 @@ export class MapComponent implements OnInit {
       this.canvas.nativeElement.offsetLeft - event.clientX,
       this.canvas.nativeElement.offsetTop - event.clientY,
     ];
+
+    const canvasElement = document.getElementById("canvas").getBoundingClientRect();
+    var offsetX = canvasElement.left;
+    var offsetY = canvasElement.top;
+
+    const mouseX = event.clientX - offsetX;
+    const mouseY = event.clientY - offsetY;
+
+    const items: Marker[] = Object.values(this.ITEMS);
+
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].isPointInside(mouseX, mouseY)) {
+        confirm("Do you realy wanna travel to " + items[i].getName() + " location? ");
+      }
+    }
   }
 
   onMouseMove(event) {
