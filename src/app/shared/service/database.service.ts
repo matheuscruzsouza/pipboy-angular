@@ -24,4 +24,10 @@ export class DatabaseService {
       callback(JSON.parse(atob(item)), key)
     );
   }
+
+  public on(callback: Function) {
+    return this.connection.on((item, key) =>
+      callback(JSON.parse(atob(item)), key)
+    );
+  }
 }

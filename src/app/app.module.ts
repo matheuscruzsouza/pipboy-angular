@@ -19,7 +19,7 @@ import { CommonModule } from "@angular/common";
 
 import { NgGunModule } from "ng-gun";
 const gunConfig = {
-  peers: [],
+  peers: ["https://personal-gundb.herokuapp.com/gun"],
   modules: {},
 };
 

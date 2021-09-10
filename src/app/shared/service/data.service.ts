@@ -18,9 +18,9 @@ export class DataService {
     private http: HttpClient,
     private databaseService: DatabaseService
   ) {
-    this.databaseService.set(["core", "player"]);
+    this.databaseService.set(["pipboy-angular", "core", "player"]);
 
-    this.databaseService.get((data) => {
+    this.databaseService.on((data) => {
       console.log("Loading player...");
 
       const player = new Player();
@@ -30,6 +30,8 @@ export class DataService {
       player.inventory = data.data.inventory;
 
       this.player = player;
+
+      this.player_change.emit(this.player);
     });
 
     if (!this.player) {
@@ -82,6 +84,7 @@ export class DataService {
     this.attack();
     this.player.loseLife(member, value);
     this.player_change.emit(this.player);
+    this.databaseService.put({ data: this.player });
   }
 
   getPlayerLocations() {
