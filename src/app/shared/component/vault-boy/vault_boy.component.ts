@@ -5,7 +5,7 @@ import {
   ViewChild,
   ElementRef,
 } from "@angular/core";
-import { DataService } from "../../data.service";
+import { DataService } from "../../service/data.service";
 
 @Component({
   selector: "app-vaultboy",

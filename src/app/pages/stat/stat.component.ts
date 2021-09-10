@@ -1,11 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  ActivatedRoute,
-  Router,
-  NavigationEnd,
-  NavigationStart,
-} from "@angular/router";
-import { DataService } from "src/app/shared/data.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { DataService } from "src/app/shared/service/data.service";
 
 @Component({
   selector: "app-stat",

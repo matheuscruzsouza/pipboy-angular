@@ -4,20 +4,20 @@ import {
   ViewChild,
   ElementRef,
   HostListener,
-} from '@angular/core';
-import { DataService } from 'src/app/shared/data.service';
-import { Marker } from 'src/app/shared/model/marker';
+} from "@angular/core";
+import { DataService } from "src/app/shared/service/data.service";
+import { Marker } from "src/app/shared/model/marker";
 
 @Component({
-  selector: 'app-map',
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.sass'],
+  selector: "app-map",
+  templateUrl: "./map.component.html",
+  styleUrls: ["./map.component.sass"],
 })
 export class MapComponent implements OnInit {
-  @ViewChild('canvas', { static: true })
+  @ViewChild("canvas", { static: true })
   canvas: ElementRef<HTMLCanvasElement>;
 
-  @ViewChild('destino', { static: true })
+  @ViewChild("destino", { static: true })
   canvas_destino: ElementRef<HTMLCanvasElement>;
 
   private ctx: CanvasRenderingContext2D;
@@ -42,8 +42,8 @@ export class MapComponent implements OnInit {
   ngOnInit(): void {
     this.canvas.nativeElement.style.background = `url("assets/images/map/background_green.png") no-repeat center`;
 
-    this.ctx = this.canvas.nativeElement.getContext('2d');
-    this.ctx_destino = this.canvas_destino.nativeElement.getContext('2d');
+    this.ctx = this.canvas.nativeElement.getContext("2d");
+    this.ctx_destino = this.canvas_destino.nativeElement.getContext("2d");
 
     this.clearCanvas();
 
@@ -98,10 +98,16 @@ export class MapComponent implements OnInit {
 
     const destino = this.dataService.getPlayerDestiny();
 
-    const fake_marker = new Marker('destiny', 'destiny', position.x, position.y, {
-      width: 12,
-      height: 30,
-    });
+    const fake_marker = new Marker(
+      "destiny",
+      "destiny",
+      position.x,
+      position.y,
+      {
+        width: 12,
+        height: 30,
+      }
+    );
 
     this.drawElement(fake_marker, this.ctx_destino);
   }
@@ -142,7 +148,9 @@ export class MapComponent implements OnInit {
       this.canvas.nativeElement.offsetTop - event.clientY,
     ];
 
-    const canvasElement = document.getElementById("canvas").getBoundingClientRect();
+    const canvasElement = document
+      .getElementById("canvas")
+      .getBoundingClientRect();
     var offsetX = canvasElement.left;
     var offsetY = canvasElement.top;
 
@@ -154,11 +162,17 @@ export class MapComponent implements OnInit {
     for (var i = 0; i < items.length; i++) {
       if (items[i].isPointInside(mouseX, mouseY)) {
         if (items[i].travel) {
-          if (confirm("Do you realy wanna travel to " + items[i].getName() + " location? ")) {
+          if (
+            confirm(
+              "Do you realy wanna travel to " +
+                items[i].getName() +
+                " location? "
+            )
+          ) {
             items[i].found = true;
             this.clearCanvas();
-  
-            items.forEach(element => {
+
+            items.forEach((element) => {
               this.drawElement(element);
             });
           }

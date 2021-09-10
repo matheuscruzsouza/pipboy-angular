@@ -6,7 +6,7 @@ import {
   AfterViewInit,
   OnChanges,
 } from "@angular/core";
-import { DataService } from "../../../data.service";
+import { DataService } from "../../../service/data.service";
 import { Player } from "src/app/shared/model/player";
 
 @Component({

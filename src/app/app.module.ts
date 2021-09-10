@@ -17,6 +17,12 @@ import { Interceptor } from "./core/interceptor.module";
 import { VideoModule } from "./shared/component/video-player/video.module";
 import { CommonModule } from "@angular/common";
 
+import { NgGunModule } from "ng-gun";
+const gunConfig = {
+  peers: [],
+  modules: {},
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +41,7 @@ import { CommonModule } from "@angular/common";
     InvModule,
     FooterModule,
     VideoModule,
+    NgGunModule.forRoot(gunConfig),
   ],
   providers: [],
   bootstrap: [AppComponent],
