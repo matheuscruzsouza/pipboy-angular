@@ -134,15 +134,11 @@ export class DataService {
     const itemType: string = item.baseClass;
 
     this.player.inventory[itemType].push(item);
-
-    console.log(this.player.inventory);
   }
 
   setWeapon(arma: Weapon) {
     this.player.equiped.hand = arma;
     this.player_change.emit(this.player);
-    console.log(this.player);
-
     this.databaseService.put({ data: this.player });
   }
 
@@ -150,7 +146,7 @@ export class DataService {
     const equiped = this.player.equiped.hand;
 
     if (equiped && this.loseAP(equiped.apCost)) {
-      equiped.fire();
+      // equiped.fire();
     }
   }
 
