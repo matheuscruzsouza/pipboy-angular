@@ -18,15 +18,17 @@ export class DataService {
     private http: HttpClient,
     private databaseService: DatabaseService
   ) {
-    this.databaseService.set(["pipboy-angular", "core", "player"]);
+    this.databaseService.set(["pipboy-angular", "v1", "core", "player"]);
 
     this.databaseService.on((data) => {
       console.log("Loading player...");
+      console.log(data);
 
       const player = new Player();
 
       player.health = data.data.health;
       player.special = data.data.special;
+      player.equiped = data.data.equiped;
       player.inventory = data.data.inventory;
 
       this.player = player;
@@ -139,6 +141,9 @@ export class DataService {
   setWeapon(arma: Weapon) {
     this.player.equiped.hand = arma;
     this.player_change.emit(this.player);
+    console.log(this.player);
+
+    this.databaseService.put({ data: this.player });
   }
 
   attack() {

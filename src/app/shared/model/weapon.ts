@@ -4,6 +4,7 @@ import {
   Ammunition,
   AmmoShotgunShell,
 } from "./ammunition";
+import { v4 as uuidv4 } from "uuid";
 
 export enum TypeWeapon {
   pistol = "Pistol",
@@ -21,6 +22,7 @@ export enum TypeWeapon {
 export abstract class Weapon {
   readonly baseClass = "weapon";
 
+  oid: string;
   name: string;
   type: TypeWeapon;
   ammunition: Bullet;
@@ -36,7 +38,9 @@ export abstract class Weapon {
   effect: string;
   imageSRC: string;
 
-  constructor() {}
+  constructor() {
+    this.oid = uuidv4();
+  }
 
   fire() {
     if (this.ammunition.quantity - 1 > 0) {

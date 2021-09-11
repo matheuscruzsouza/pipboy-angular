@@ -32,20 +32,10 @@ export class WeaponsComponent implements OnInit {
 
   ngOnInit(): void {
     this.weapons = this.dataService.player.inventory.weapon;
-    this.selected = this.dataService.player.equiped.hand;
-
-    console.log(this.dataService.getPlayerInventory("weapon"));
   }
 
   isSelected(arma: Weapon) {
-    if (this.selected) {
-      const keys = Object.keys(this.selected);
-      const filter = keys.filter((key) => this.selected[key] == arma[key]);
-      const length = filter.length == keys.length;
-
-      return length;
-    }
-    return false;
+    return this.dataService.player.equiped.hand?.oid === arma?.oid;
   }
 
   isPreview(arma: Weapon) {
@@ -98,7 +88,7 @@ export class WeaponsComponent implements OnInit {
   select(arma: Weapon) {
     this.selected = arma;
     this.dataService.loseAP(10);
-    this.dataService.player.equiped.hand = arma;
+    this.dataService.setWeapon(arma);
   }
 
   clearPreview() {
