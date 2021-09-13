@@ -16,12 +16,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { Interceptor } from "./core/interceptor.module";
 import { VideoModule } from "./shared/component/video-player/video.module";
 import { CommonModule } from "@angular/common";
-
-import { NgGunModule } from "ng-gun";
-const gunConfig = {
-  peers: ["https://personal-gundb.herokuapp.com/gun"],
-  modules: {},
-};
+import { LoginComponent } from "./shared/component/login/login.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { SigninComponent } from "./shared/component/signin/signin.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +27,8 @@ const gunConfig = {
     MapComponent,
     DataComponent,
     RadioComponent,
+    LoginComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +40,7 @@ const gunConfig = {
     InvModule,
     FooterModule,
     VideoModule,
-    NgGunModule.forRoot(gunConfig),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

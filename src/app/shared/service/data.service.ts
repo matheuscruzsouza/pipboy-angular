@@ -4,7 +4,6 @@ import { Marker } from "../model/marker";
 import { Pistol, Weapon, Melee, Shotgun } from "../model/weapon";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
-import { AuthService } from "../../core/auth.service";
 import { DatabaseService } from "./database.service";
 
 @Injectable({
@@ -14,65 +13,16 @@ export class DataService {
   player: Player;
   player_change = new EventEmitter<Player>();
 
+  private path = ["pipboy-angular", "v1", "core", "player"];
+
   constructor(
     private http: HttpClient,
     private databaseService: DatabaseService
   ) {
-    this.databaseService.set(["pipboy-angular", "v1", "core", "player"]);
+    console.log(this.databaseService.userStatus());
 
-    this.databaseService.on((data) => {
-      console.log("Loading player...");
-      console.log(data);
-
-      const player = new Player();
-
-      player.health = data.data.health;
-      player.special = data.data.special;
-      player.equiped = data.data.equiped;
-      player.inventory = data.data.inventory;
-
-      this.player = player;
-
-      this.player_change.emit(this.player);
-    });
-
-    if (!this.player) {
-      console.log("Building player...");
-
-      const player = new Player({
-        health: {
-          head: 100,
-          leftarm: 100,
-          rightarm: 100,
-          leftleg: 100,
-          rightleg: 100,
-          addicted: 0,
-          irradiated: 0,
-        },
-        atribute: {
-          strength: 1,
-          perception: 2,
-          endurance: 5,
-          charisma: 0,
-          inteligence: 5,
-          agility: 5,
-          luck: 5,
-        },
-        experience: 15,
-        total_action_points: 50,
-        total_health_points: 150,
-      });
-      this.player = player;
-
-      this.addInventoryPlayer(new Pistol());
-      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
-      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
-      this.addInventoryPlayer(new Shotgun());
-      this.addInventoryPlayer(new Melee());
-
-      this.databaseService.put({ data: player });
-
-      this.player_change.emit(this.player);
+    if (this.databaseService.userStatus()) {
+      this.preparePlayer();
     }
   }
 
@@ -86,7 +36,7 @@ export class DataService {
     this.attack();
     this.player.loseLife(member, value);
     this.player_change.emit(this.player);
-    this.databaseService.put({ data: this.player });
+    this.databaseService.put(this.path, { data: this.player }, true);
   }
 
   getPlayerLocations() {
@@ -139,7 +89,7 @@ export class DataService {
   setWeapon(arma: Weapon) {
     this.player.equiped.hand = arma;
     this.player_change.emit(this.player);
-    this.databaseService.put({ data: this.player });
+    this.databaseService.put(this.path, { data: this.player }, true);
   }
 
   attack() {
@@ -175,5 +125,72 @@ export class DataService {
       r[a.name + a.accuracy] = [...(r[a.name + a.accuracy] || []), a];
       return r;
     }, {});
+  }
+
+  preparePlayer() {
+    console.log(this.databaseService.private);
+
+    this.databaseService.on(
+      this.path,
+      (data) => {
+        console.log("Loading player...");
+        console.log(data);
+
+        const player = new Player();
+
+        player.health = data.data.health;
+        player.special = data.data.special;
+        player.equiped = data.data.equiped;
+        player.inventory = data.data.inventory;
+
+        this.player = player;
+
+        this.player_change.emit(this.player);
+      },
+      true
+    );
+
+    if (!this.player) {
+      console.log("Building player...");
+
+      const player = new Player({
+        health: {
+          head: 100,
+          leftarm: 100,
+          rightarm: 100,
+          leftleg: 100,
+          rightleg: 100,
+          addicted: 0,
+          irradiated: 0,
+        },
+        atribute: {
+          strength: 1,
+          perception: 2,
+          endurance: 5,
+          charisma: 0,
+          inteligence: 5,
+          agility: 5,
+          luck: 5,
+        },
+        experience: 15,
+        total_action_points: 50,
+        total_health_points: 150,
+      });
+      this.player = player;
+
+      this.addInventoryPlayer(new Pistol());
+      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+      this.addInventoryPlayer(new Pistol({ accuracy: 10.93 }));
+      this.addInventoryPlayer(new Shotgun());
+      this.addInventoryPlayer(new Melee());
+
+      this.player_change.emit(this.player);
+    }
+
+    console.log("ALL USERS");
+
+    this.databaseService.getAll(["users", "online"], (data) =>
+      console.log(data)
+    );
   }
 }
