@@ -7,12 +7,14 @@ import { DataComponent } from "./pages/data/data.component";
 import { RadioComponent } from "./pages/radio/radio.component";
 import { LoginComponent } from "./shared/component/login/login.component";
 import { SigninComponent } from "./shared/component/signin/signin.component";
+import { AuthGuard } from "./core/auth.guard";
 
 const routes: Routes = [
   {
     path: "",
     pathMatch: "full",
-    redirectTo: "login",
+    redirectTo: "stat",
+    canActivate: [AuthGuard],
   },
   {
     path: "login",
@@ -25,22 +27,27 @@ const routes: Routes = [
   {
     path: "stat",
     component: StatComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "inv",
     component: InvComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "data",
     component: DataComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "map",
     component: MapComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "radio",
     component: RadioComponent,
+    canActivate: [AuthGuard],
   },
 ];
 

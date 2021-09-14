@@ -8,7 +8,6 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { Observable } from "rxjs/internal/Observable";
 import { AuthService } from "./auth.service";
 import { switchMap, tap, catchError } from "rxjs/operators";
-import { Router } from "@angular/router";
 import { Subject } from "rxjs/internal/Subject";
 import { throwError } from "rxjs/internal/observable/throwError";
 

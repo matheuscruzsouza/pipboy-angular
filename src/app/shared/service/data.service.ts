@@ -2,9 +2,8 @@ import { Injectable, EventEmitter } from "@angular/core";
 import { Player } from "../model/player";
 import { Marker } from "../model/marker";
 import { Pistol, Weapon, Melee, Shotgun } from "../model/weapon";
-import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
 import { DatabaseService } from "./database.service";
+import { tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -15,28 +14,17 @@ export class DataService {
 
   private path = ["pipboy-angular", "v1", "core", "player"];
 
-  constructor(
-    private http: HttpClient,
-    private databaseService: DatabaseService
-  ) {
-    console.log(this.databaseService.userStatus());
-
+  constructor(private databaseService: DatabaseService) {
     if (this.databaseService.userStatus()) {
       this.preparePlayer();
     }
-  }
-
-  listPlayer(oidpessoa: string) {
-    return this.http.get(
-      environment.BACKEND_API + `/fallout/player?pessoa=${oidpessoa}`
-    );
   }
 
   loseLife(member, value) {
     this.attack();
     this.player.loseLife(member, value);
     this.player_change.emit(this.player);
-    this.databaseService.put(this.path, { data: this.player }, true);
+    this.databaseService.put(this.path, this.player, true);
   }
 
   getPlayerLocations() {
@@ -55,7 +43,7 @@ export class DataService {
         found: false,
         travel: true,
       }),
-      // new Marker("hospital", 1186, 386),
+      new Marker("Hospital", "hospital", 1186, 386),
     ];
   }
 
@@ -89,7 +77,7 @@ export class DataService {
   setWeapon(arma: Weapon) {
     this.player.equiped.hand = arma;
     this.player_change.emit(this.player);
-    this.databaseService.put(this.path, { data: this.player }, true);
+    this.databaseService.put(this.path, this.player, true);
   }
 
   attack() {
@@ -130,29 +118,25 @@ export class DataService {
   preparePlayer() {
     console.log(this.databaseService.private);
 
-    this.databaseService.on(
-      this.path,
-      (data) => {
-        console.log("Loading player...");
-        console.log(data);
+    this.databaseService
+      .on(this.path, true)
+      .pipe(
+        tap((data: any) => {
+          const player = new Player();
 
-        const player = new Player();
+          player.health = data.value.health;
+          player.special = data.value.special;
+          player.equiped = data.value.equiped;
+          player.inventory = data.value.inventory;
 
-        player.health = data.data.health;
-        player.special = data.data.special;
-        player.equiped = data.data.equiped;
-        player.inventory = data.data.inventory;
+          this.player = player;
 
-        this.player = player;
-
-        this.player_change.emit(this.player);
-      },
-      true
-    );
+          this.player_change.emit(this.player);
+        })
+      )
+      .subscribe();
 
     if (!this.player) {
-      console.log("Building player...");
-
       const player = new Player({
         health: {
           head: 100,
@@ -189,8 +173,9 @@ export class DataService {
 
     console.log("ALL USERS");
 
-    this.databaseService.getAll(["users", "online"], (data) =>
-      console.log(data)
-    );
+    this.databaseService
+      .getAll(["users", "online"])
+      .pipe(tap((data) => console.log(data)))
+      .subscribe();
   }
 }

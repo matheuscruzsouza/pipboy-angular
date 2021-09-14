@@ -1,14 +1,13 @@
 import { Injectable } from "@angular/core";
 import * as Gun from "gun";
 import * as SEA from "gun/sea";
-import { from } from "rxjs";
+import { from, Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class DatabaseService {
   private GUN;
-  private SEA;
   private USER;
 
   connection = undefined;
@@ -22,8 +21,6 @@ export class DatabaseService {
       this.GUN.SEA = SEA;
     }
 
-    this.SEA = Gun.SEA;
-
     this.connection = this.GUN;
 
     if (this.userStatus()) {
@@ -31,64 +28,64 @@ export class DatabaseService {
     }
   }
 
-  public put(path: string[], data: any, _private: boolean = false) {
+  // GENERIC METHODS
+
+  private defineConnection(path: string[], _private: boolean) {
     let conn = _private ? this.private : this.connection;
 
     path.forEach((place) => (conn = conn.get(place)));
+
+    return conn;
+  }
+
+  public put(path: string[], data: any, _private: boolean = false) {
+    const conn = this.defineConnection(path, _private);
 
     conn.put(btoa(JSON.stringify(data)));
   }
 
   public set(path: string[], data: any, _private: boolean = false) {
-    let conn = _private ? this.private : this.connection;
+    const conn = this.defineConnection(path, _private);
 
-    path.forEach((place) => (conn = conn.get(place)));
-
-    conn.set(btoa(JSON.stringify(data)));
+    conn.set(data);
   }
 
-  public get(path: string[], callback: Function, _private: boolean = false) {
-    let conn = _private ? this.private : this.connection;
+  public get(path: string[], _private: boolean = false) {
+    const conn = this.defineConnection(path, _private);
 
-    path.forEach((place) => (conn = conn.get(place)));
-
-    return conn.once((item, key) => callback(JSON.parse(atob(item)), key));
-  }
-
-  public getAll(path: string[], callback: Function, _private: boolean = false) {
-    let conn = _private ? this.private : this.connection;
-
-    path.forEach((place) => (conn = conn.get(place)));
-
-    return conn.map((item, key) =>
-      callback(JSON.parse(atob(item || "e30=")), key)
+    return new Observable((subscriber) =>
+      conn.once((item, key) =>
+        subscriber.next({ key, data: JSON.parse(atob(item)) })
+      )
     );
   }
 
-  public on(path: string[], callback: Function, _private: boolean = false) {
-    let conn = _private ? this.private : this.connection;
+  public getAll(path: string[], _private: boolean = false) {
+    const conn = this.defineConnection(path, _private);
 
-    path.forEach((place) => (conn = conn.get(place)));
-
-    return conn.on((item, key) => callback(JSON.parse(atob(item)), key));
+    return new Observable((subscriber) =>
+      conn.map((item, key) => subscriber.next({ item, key }))
+    );
   }
+
+  public on(path: string[], _private: boolean = false) {
+    const conn = this.defineConnection(path, _private);
+
+    return new Observable((subscriber) => {
+      conn.on((item, key) =>
+        subscriber.next({ key, value: JSON.parse(atob(item)) })
+      );
+    });
+  }
+
+  // SPECIFIC USER METHODS
 
   public signup(username: string, password: string) {
     return from(
       new Promise((resolve, reject) =>
         this.USER.create(username, password, (data) => {
-          console.log(data);
-
           if (!data.err) {
-            const copyData = { ...data.sea };
-            copyData.username = username;
-            sessionStorage.setItem("auth", JSON.stringify(copyData));
             resolve(data);
-            this.private = this.USER.get("private");
-            this.set(["users", "online", username], {
-              username: username,
-              pubKey: data.sea.pub,
-            });
           } else {
             reject(data);
           }
@@ -104,21 +101,25 @@ export class DatabaseService {
           console.log(data);
 
           if (!data.err) {
-            const copyData = { ...data.sea };
-            copyData.username = username;
-            sessionStorage.setItem("auth", JSON.stringify(copyData));
+            this.saveData(data, username);
             resolve(data);
-            this.private = this.USER.get("private");
-            this.set(["users", "online", username], {
-              username: username,
-              pubKey: data.sea.pub,
-            });
           } else {
             reject(data);
           }
         })
       )
     );
+  }
+
+  private saveData(data, username) {
+    const copyData = { ...data.sea };
+    copyData.username = username;
+    sessionStorage.setItem("auth", JSON.stringify(copyData));
+    this.private = this.USER.get("private");
+    this.set(["users", "online"], {
+      username: username,
+      pubKey: data.sea.pub,
+    });
   }
 
   public logout() {
