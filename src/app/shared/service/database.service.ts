@@ -98,8 +98,6 @@ export class DatabaseService {
     return from(
       new Promise((resolve, reject) =>
         this.USER.auth(username, password, (data) => {
-          console.log(data);
-
           if (!data.err) {
             this.saveData(data, username);
             resolve(data);
@@ -138,5 +136,11 @@ export class DatabaseService {
 
   public userStatus() {
     return !!sessionStorage.getItem("pair");
+  }
+
+  public getUserData(pubKey: string) {
+    return new Observable((subscriber) =>
+      this.GUN.user(pubKey).once((data) => subscriber.next(data))
+    );
   }
 }

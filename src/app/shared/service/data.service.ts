@@ -12,7 +12,7 @@ export class DataService {
   player: Player;
   player_change = new EventEmitter<Player>();
 
-  private path = ["pipboy-angular", "v1", "core", "player"];
+  private path = ["pipboy-angular-rpg", "v1", "core", "player"];
 
   constructor(private databaseService: DatabaseService) {
     if (this.databaseService.userStatus()) {
@@ -116,8 +116,6 @@ export class DataService {
   }
 
   preparePlayer() {
-    console.log(this.databaseService.private);
-
     this.databaseService
       .on(this.path, true)
       .pipe(
@@ -173,9 +171,9 @@ export class DataService {
 
     console.log("ALL USERS");
 
-    this.databaseService
-      .getAll(["users", "online"])
-      .pipe(tap((data) => console.log(data)))
-      .subscribe();
+    // this.databaseService
+    //   .getAll(["users", "online"])
+    //   .pipe(tap((data: any) => console.log(data)))
+    //   .subscribe();
   }
 }
