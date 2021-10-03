@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128pt"
+   height="131pt"
+   viewBox="0 0 128 131"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="factory.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="836"
+     inkscape:window-height="480"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.351145"
+     inkscape:cx="85.333333"
+     inkscape:cy="87.333333"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="surface1" />
+  <g
+     id="surface1">
+    <path
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 128,0.0078125 V 130.99219 H 0 V 76.746094 l 28.519531,-21.5 V 76.414062 L 56.703125,55.246094 V 76.414062 L 83.566406,55.90625 V 0.0078125 H 101.14063 V 70.792969 h 9.28515 V 0.0078125 H 128 M 76.269531,92.621094 H 59.027344 v 8.269536 h 17.242187 v -8.269536 m 0,13.894536 H 59.027344 v 8.26953 h 17.242187 v -8.26953 M 52.726562,92.621094 H 35.480469 v 8.269536 h 17.246093 v -8.269536 m -23.546874,0 H 11.9375 v 8.269536 h 17.242188 v -8.269536 m 0,22.164066 v -8.26953 H 11.9375 v 8.26953 h 17.242188 m 6.300781,0 h 17.246093 v -8.26953 H 35.480469 v 8.26953"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

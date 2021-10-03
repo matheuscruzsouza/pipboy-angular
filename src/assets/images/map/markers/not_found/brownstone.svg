@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128pt"
+   height="115pt"
+   viewBox="0 0 128 115"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="brownstone.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="685"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.5391304"
+     inkscape:cx="-46.559322"
+     inkscape:cy="76.666667"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="surface1" />
+  <g
+     id="surface1">
+    <path
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 44.207031,37.273438 h 15.3125 v 15.605468 h -15.3125 V 37.273438 M 22.828125,52.878906 V 37.273438 H 38.429688 V 52.878906 H 22.828125 M 87.546875,0 128,25.140625 118.17578,40.742188 V 115 H 10.113281 V 47.964844 L 0,33.230469 41.316406,7.511719 58.367188,18.203125 87.546875,0 m 27.738285,32.941406 3.46875,-5.78125 L 87.546875,7.800781 58.078125,26.003906 41.316406,15.027344 9.535156,35.25 l 3.46875,5.492188 3.753906,-2.3125 V 108.35156 H 31.785156 V 79.171875 H 50.5625 V 108.35156 H 78.300781 V 79.171875 h 18.78125 V 108.35156 H 111.82031 V 30.628906 l 3.46485,2.3125 M 90.4375,52.878906 V 37.273438 H 105.75 V 52.878906 H 90.4375 m -5.488281,0 H 69.054688 V 37.273438 h 15.894531 v 15.605468"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

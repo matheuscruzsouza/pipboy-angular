@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128pt"
+   height="137pt"
+   viewBox="0 0 128 137"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="church.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="685"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.2919708"
+     inkscape:cx="-71.79096"
+     inkscape:cy="91.333333"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="surface1" />
+  <g
+     id="surface1">
+    <path
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 29.230469,123.85547 V 103.44141 H 17.757812 v 20.41406 H 29.230469 M 55.308594,103.44141 H 43.835938 v 20.41406 h 11.472656 v -20.41406 m 52.499996,20.41406 V 103.44141 H 95.988281 v 20.41406 H 107.80859 M 81.730469,103.44141 H 69.910156 v 20.41406 H 81.730469 V 103.44141 M 75.472656,38.746094 88.335938,0.347656 92.160156,0 105.02734,38.402344 v 36.324218 h 5.5625 l 17.38282,19.375 H 122.0625 V 137 H 4.894531 V 94.101562 H 0.0273438 L 17.757812,75.074219 H 75.472656 V 38.746094 m 9.039063,3.808594 V 65.386719 H 94.597656 V 42.554688 H 84.511719"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

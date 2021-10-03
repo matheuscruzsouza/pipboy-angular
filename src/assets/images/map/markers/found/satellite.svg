@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128pt"
+   height="149pt"
+   viewBox="0 0 128 149"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="satellite.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="685"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.1879195"
+     inkscape:cx="-85.553672"
+     inkscape:cy="99.333333"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="surface1" />
+  <g
+     id="surface1">
+    <path
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 110.72266,0.0429688 c 7.33203,14.3671872 10.07812,29.6523432 8.24609,45.8476562 -2.09375,16.460937 -8.50781,31.089844 -19.238281,43.894531 H 119.36328 L 128,148.95703 H 80.492188 l 6.671874,-47.02344 C 74.339844,111.07813 60.074219,116.43359 44.367188,118 28.925781,119.56641 14.136719,117.08594 0,110.55469 L 46.722656,63.917969 31.804688,31.390625 64.394531,46.285156 110.72266,0.0429688"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

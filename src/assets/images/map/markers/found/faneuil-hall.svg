@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128pt"
+   height="128pt"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="faneuil-hall.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="836"
+     inkscape:window-height="480"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.3828125"
+     inkscape:cx="85.333333"
+     inkscape:cy="85.333333"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="surface1" />
+  <g
+     id="surface1">
+    <path
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 79.667969,100.66797 C 79.667969,99.554688 78.222656,99 75.332031,99 c -2.441406,0 -3.664062,0.554688 -3.664062,1.66797 V 113 h 8 V 100.66797 M 75.332031,80 c -2.441406,0 -3.664062,0.554688 -3.664062,1.667969 v 12 h 8 v -12 C 79.667969,80.554688 78.222656,80 75.332031,80 m 20,-8 2,-1 L 99,68.332031 97.332031,66 l -2,-1.332031 c -1.109375,0 -2,0.441406 -2.664062,1.332031 L 92,68.332031 92.667969,71 l 2.664062,1 m 8.999999,21.667969 v -12 C 104.33203,80.554688 103.10938,80 100.66797,80 c -2.890626,0 -4.335939,0.554688 -4.335939,1.667969 v 12 h 7.999999 m 0,7.000001 c 0,-1.113282 -1.22265,-1.66797 -3.66406,-1.66797 -2.890626,0 -4.335939,0.554688 -4.335939,1.66797 V 113 h 7.999999 v -12.33203 m -74.664061,0 c 0,-1.113282 -1.335938,-1.66797 -4,-1.66797 -2.667969,0 -4,0.554688 -4,1.66797 V 113 h 8 v -12.33203 m -4,-20.66797 c -2.667969,0 -4,0.554688 -4,1.667969 v 12 h 8 v -12 c 0,-1.113281 -1.335938,-1.667969 -4,-1.667969 M 55,100.66797 C 55,99.554688 53.554688,99 50.667969,99 c -2.667969,0 -4,0.554688 -4,1.66797 V 113 H 55 V 100.66797 M 35,66 32.332031,64.667969 29.667969,66 29,68.332031 29.667969,71 32.332031,72 35,71 36,68.332031 C 36,67.222656 35.667969,66.445312 35,66 M 55,81.667969 C 55,80.554688 53.554688,80 50.667969,80 c -2.667969,0 -4,0.554688 -4,1.667969 v 12 H 55 v -12 M 56.332031,66 52.667969,73 H 73 L 69.332031,66 C 67.554688,64.222656 65.445312,63.332031 63,63.332031 c -2.222656,0 -4.445312,0.890625 -6.667969,2.667969 m 11,-25.667969 V 28.667969 c 0,-2.222657 -1.332031,-3.335938 -4,-3.335938 -2.441406,0 -3.664062,1.113281 -3.664062,3.335938 v 11.664062 h 7.664062 M 65.667969,14.667969 C 70.554688,14.890625 74.332031,17 77,21 l 1.667969,6 v 15 l 5.664062,1.667969 v 10 l 5,3.332031 h 15.999999 v 9 L 120,74.667969 h -8.66797 V 121 H 128 v 7 H 0 v -7 H 15 V 74.667969 H 7.667969 l 14,-8 V 57 h 16 L 44,53.667969 v -10 L 50,42 V 27 l 1.667969,-6 c 2.222656,-4 6,-6.109375 11.332031,-6.332031 V 0 h 2.667969 v 14.667969"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

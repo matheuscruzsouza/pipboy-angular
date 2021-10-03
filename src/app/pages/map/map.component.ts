@@ -7,6 +7,7 @@ import {
 } from "@angular/core";
 import { DataService } from "src/app/shared/service/data.service";
 import { Marker } from "src/app/shared/model/marker";
+import { map } from "rxjs/operators";
 
 @Component({
   selector: "app-map",
@@ -63,10 +64,31 @@ export class MapComponent implements OnInit {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   }
 
-  drawPlayerLocations() {
-    this.dataService.getPlayerLocations().forEach((marker) => {
-      this.drawElement(marker);
-    });
+  async drawPlayerLocations() {
+    this.dataService
+      .getPlayerLocations()
+      .pipe(
+        map((locations: any) => {
+          Object.entries(locations).forEach((entrie) => {
+            const key = entrie[0];
+            const value: any = entrie[1];
+
+            this.drawElement(
+              new Marker(
+                key,
+                value.image.replace(".svg", ""),
+                ((value.position.x + 10) * 2048) / 1098,
+                ((value.position.y + 10) * 2048) / 1098,
+                {
+                  found: false,
+                  travel: false,
+                }
+              )
+            );
+          });
+        })
+      )
+      .subscribe();
   }
 
   drawPlayerPosition() {

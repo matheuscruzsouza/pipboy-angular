@@ -19,6 +19,12 @@ import { CommonModule } from "@angular/common";
 import { LoginComponent } from "./shared/component/login/login.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { SigninComponent } from "./shared/component/signin/signin.component";
+import { NgxGundbModule, NgxGundbOptions } from "@matheuscruzsouza/ngx-gundb";
+
+const config: NgxGundbOptions = {
+  // peers: [],
+  SEA: true,
+};
 
 @NgModule({
   declarations: [
@@ -41,6 +47,7 @@ import { SigninComponent } from "./shared/component/signin/signin.component";
     FooterModule,
     VideoModule,
     ReactiveFormsModule,
+    NgxGundbModule.forRoot(config),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,1436 @@
+{
+  "Abernathy Farm": {
+    "position": { "x": 253, "y": 150 },
+    "image": "farm.svg",
+    "id": "f4a01b",
+    "label": "Abernathy Farm"
+  },
+  "Andrew Station": {
+    "position": { "x": 674, "y": 628 },
+    "image": "metro.svg",
+    "id": "f4a03b",
+    "label": "Andrew Station"
+  },
+  "ArcJet Systems": {
+    "position": { "x": 294, "y": 357 },
+    "image": "factory.svg",
+    "id": "f4a04b",
+    "label": "ArcJet Systems"
+  },
+  "Atlantic Offices": {
+    "position": { "x": 180, "y": 848 },
+    "image": "skyscraper.svg",
+    "id": "f4a06b",
+    "label": "Atlantic Offices"
+  },
+  "Atom Cats Garage": {
+    "position": { "x": 745, "y": 744 },
+    "image": "junkyard.svg",
+    "id": "f4a07b",
+    "label": "Atom Cats Garage"
+  },
+  "Back Street Apparel": {
+    "position": { "x": 535, "y": 503 },
+    "image": "brownstone.svg",
+    "id": "f4b03b",
+    "label": "Back Street Apparel"
+  },
+  "BADTFL Regional Office": {
+    "position": { "x": 625, "y": 356 },
+    "image": "low-rise.svg",
+    "id": "f4b05b",
+    "label": "BADTFL Regional Office"
+  },
+  "Beantown Brewery": {
+    "position": { "x": 402, "y": 421 },
+    "image": "industrial-dome.svg",
+    "id": "f4b06b",
+    "label": "Beantown Brewery"
+  },
+  "Bedford Station": {
+    "position": { "x": 456, "y": 142 },
+    "image": "railroad.svg",
+    "id": "f4b07b",
+    "label": "Bedford Station"
+  },
+  "Big John's Salvage": {
+    "position": { "x": 604, "y": 633 },
+    "image": "junkyard.svg",
+    "id": "f4b08b",
+    "label": "Big John's Salvage"
+  },
+  "Boston Airport": {
+    "position": { "x": 786, "y": 455 },
+    "image": "airfield.svg",
+    "id": "f4b10b",
+    "label": "Boston Airport"
+  },
+  "Boston Bugle Building": {
+    "position": { "x": 662, "y": 458 },
+    "image": "skyscraper.svg",
+    "id": "f4b11b",
+    "label": "Boston Bugle Building"
+  },
+  "Boston Common": {
+    "position": { "x": 637, "y": 515 },
+    "image": "landmark.svg",
+    "id": "f4b12b",
+    "label": "Boston Common"
+  },
+  "Boston Mayoral Shelter": {
+    "position": { "x": 148, "y": 512 },
+    "image": "bunker.svg",
+    "id": "f4b13b",
+    "label": "Boston Mayoral Shelter"
+  },
+  "Boston Police Rationing Site": {
+    "position": { "x": 511, "y": 611 },
+    "image": "railroad.svg",
+    "id": "f4b14b",
+    "label": "Boston Police Rationing Site"
+  },
+  "Boston Public Library": {
+    "position": { "x": 567, "y": 537 },
+    "image": "monument.svg",
+    "id": "f4b15b",
+    "label": "Boston Public Library"
+  },
+  "Boylston Club": {
+    "position": { "x": 631, "y": 533 },
+    "image": "office.svg",
+    "id": "f4b17b",
+    "label": "Boylston Club"
+  },
+  "Breakheart Banks": {
+    "position": { "x": 734, "y": 108 },
+    "image": "farm.svg",
+    "id": "f4b18b",
+    "label": "Breakheart Banks"
+  },
+  "Bunker Hill": {
+    "position": { "x": 662, "y": 381 },
+    "image": "bunker-hill.svg",
+    "id": "f4b21b",
+    "label": "Bunker Hill"
+  },
+  "C.I.T. Ruins": {
+    "position": { "x": 512, "y": 454 },
+    "image": "office.svg",
+    "id": "f4c00b",
+    "label": "C.I.T. Ruins"
+  },
+  "Cabot House": {
+    "position": { "x": 661, "y": 434 },
+    "image": "office.svg",
+    "id": "f4ca0b",
+    "label": "Cabot House"
+  },
+  "Cambridge Campus Diner": {
+    "position": { "x": 485, "y": 411 },
+    "image": "office.svg",
+    "id": "f4c01b",
+    "label": "Cambridge Campus Diner"
+  },
+  "Cambridge Crater": {
+    "position": { "x": 573, "y": 409 },
+    "image": "urban-ruins.svg",
+    "id": "f4ca1b",
+    "label": "Cambridge Crater"
+  },
+  "Cambridge Police Station": {
+    "position": { "x": 457, "y": 397 },
+    "image": "police-station.svg",
+    "id": "f4c02b",
+    "label": "Cambridge Police Station"
+  },
+  "Cambridge Polymer Labs": {
+    "position": { "x": 467, "y": 453 },
+    "image": "factory.svg",
+    "id": "f4c03b",
+    "label": "Cambridge Polymer Labs"
+  },
+  "Campus Law Offices": {
+    "position": { "x": 497, "y": 419 },
+    "image": "urban-ruins.svg",
+    "id": "f4c05b",
+    "label": "Campus Law Offices"
+  },
+  "Capsized Factory": {
+    "position": { "x": 219, "y": 856 },
+    "image": "factory.svg",
+    "id": "f4c06b",
+    "label": "Capsized Factory"
+  },
+  "Cave (Red Rocket Station)": {
+    "position": { "x": 261, "y": 825 },
+    "image": "cave.svg",
+    "id": "f4c07b",
+    "label": "Cave (Red Rocket Station)"
+  },
+  "Cave (Super-Duper Mart)": {
+    "position": { "x": 273, "y": 938 },
+    "image": "cave.svg",
+    "id": "f4ca7b",
+    "label": "Cave (Super-Duper Mart)"
+  },
+  "Charles View Amphitheater": {
+    "position": { "x": 612, "y": 482 },
+    "image": "encampment.svg",
+    "id": "f4c08b",
+    "label": "Charles View Amphitheater"
+  },
+  "Chestnut Hillock Reservoir": {
+    "position": { "x": 457, "y": 547 },
+    "image": "pond-lake.svg",
+    "id": "f4c10b",
+    "label": "Chestnut Hillock Reservoir"
+  },
+  "Coast Guard Pier": {
+    "position": { "x": 435, "y": 660 },
+    "image": "military-base.svg",
+    "id": "f4c15b",
+    "label": "Coast Guard Pier"
+  },
+  "Coastal Cottage": {
+    "position": { "x": 880, "y": 62 },
+    "image": "town-ruins.svg",
+    "id": "f4c16b",
+    "label": "Coastal Cottage"
+  },
+  "College Square": {
+    "position": { "x": 453, "y": 378 },
+    "image": "urban-ruins.svg",
+    "id": "f4c17b",
+    "label": "College Square"
+  },
+  "Collegiate Administration Building": {
+    "position": { "x": 489, "y": 373 },
+    "image": "skyscraper.svg",
+    "id": "f4c20b",
+    "label": "Collegiate Administration Building"
+  },
+  "Combat Zone": {
+    "position": { "x": 639, "y": 540 },
+    "image": "settlement.svg",
+    "id": "f4c21b",
+    "label": "Combat Zone"
+  },
+  "Concord": {
+    "position": { "x": 323, "y": 130 },
+    "image": "town-ruins.svg",
+    "id": "f4c25b",
+    "label": "Concord"
+  },
+  "Corvega Assembly Plant": {
+    "position": { "x": 434, "y": 304 },
+    "image": "factory.svg",
+    "id": "f4c30b",
+    "label": "Corvega Assembly Plant"
+  },
+  "County Crossing": {
+    "position": { "x": 747, "y": 306 },
+    "image": "farm.svg",
+    "id": "f4c31b",
+    "label": "County Crossing"
+  },
+  "Covenant": {
+    "position": { "x": 549, "y": 241 },
+    "image": "settlement.svg",
+    "id": "f4c32b",
+    "label": "Covenant"
+  },
+  "Crater House": {
+    "position": { "x": 971, "y": 145 },
+    "image": "radioactive-area.svg",
+    "id": "f4c33b",
+    "label": "Crater House"
+  },
+  "Crater of Atom": {
+    "position": { "x": 158, "y": 935 },
+    "image": "radioactive-area.svg",
+    "id": "f4c34b",
+    "label": "Crater of Atom"
+  },
+  "Croup Manor": {
+    "position": { "x": 971, "y": 283 },
+    "image": "town-ruins.svg",
+    "id": "f4c35b",
+    "label": "Croup Manor"
+  },
+  "Custom House Tower": {
+    "position": { "x": 725, "y": 483 },
+    "image": "custom-house.svg",
+    "id": "f4c36b",
+    "label": "Custom House Tower"
+  },
+  "Cutler Bend": {
+    "position": { "x": 462, "y": 759 },
+    "image": "shipwreck.svg",
+    "id": "f4c37b",
+    "label": "Cutler Bend"
+  },
+  "Dark Hollow Pond": {
+    "position": { "x": 621, "y": 124 },
+    "image": "pond-lake.svg",
+    "id": "f4d02b",
+    "label": "Dark Hollow Pond"
+  },
+  "Dartmouth Professional Building": {
+    "position": { "x": 576, "y": 567 },
+    "image": "skyscraper.svg",
+    "id": "f4d03b",
+    "label": "Dartmouth Professional Building"
+  },
+  "Decayed Reactor Site": {
+    "position": { "x": 81, "y": 898 },
+    "image": "industrial-dome.svg",
+    "id": "f4d04b",
+    "label": "Decayed Reactor Site"
+  },
+  "Decrepit Factory": {
+    "position": { "x": 119, "y": 959 },
+    "image": "factory.svg",
+    "id": "f4da4b",
+    "label": "Decrepit Factory"
+  },
+  "Diamond City": {
+    "position": { "x": 506, "y": 571 },
+    "image": "diamond-city.svg",
+    "id": "f4d05b",
+    "label": "Diamond City"
+  },
+  "Diamond City Market": {
+    "position": { "x": 519, "y": 557 },
+    "image": "settlement.svg",
+    "id": "f4d06b",
+    "label": "Diamond City Market"
+  },
+  "Don Bosco Technical High School": {
+    "position": { "x": 640, "y": 573 },
+    "image": "school.svg",
+    "id": "f4d09b",
+    "label": "Don Bosco Technical High School"
+  },
+  "Drumlin Diner": {
+    "position": { "x": 367, "y": 205 },
+    "image": "low-rise.svg",
+    "id": "f4d11b",
+    "label": "Drumlin Diner"
+  },
+  "Dunwich Borers": {
+    "position": { "x": 865, "y": 144 },
+    "image": "quarry.svg",
+    "id": "f4d13b",
+    "label": "Dunwich Borers"
+  },
+  "East Boston Police Station": {
+    "position": { "x": 750, "y": 402 },
+    "image": "police-station.svg",
+    "id": "f4e02b",
+    "label": "East Boston Police Station"
+  },
+  "East Boston Preparatory School": {
+    "position": { "x": 779, "y": 387 },
+    "image": "school.svg",
+    "id": "f4e03b",
+    "label": "East Boston Preparatory School"
+  },
+  "Easy City Downs": {
+    "position": { "x": 816, "y": 392 },
+    "image": "encampment.svg",
+    "id": "f4e07b",
+    "label": "Easy City Downs"
+  },
+  "Edge of the Glowing Sea": {
+    "position": { "x": 342, "y": 779 },
+    "image": "landmark.svg",
+    "id": "f4e08b",
+    "label": "Edge of the Glowing Sea"
+  },
+  "Egret Tours Marina": {
+    "position": { "x": 447, "y": 713 },
+    "image": "pier.svg",
+    "id": "f4e09b",
+    "label": "Egret Tours Marina"
+  },
+  "Electrical Hobbyist's Club": {
+    "position": { "x": 333, "y": 670 },
+    "image": "factory.svg",
+    "id": "f4e10b",
+    "label": "Electrical Hobbyist's Club"
+  },
+  "Fairline Hill Estates": {
+    "position": { "x": 521, "y": 662 },
+    "image": "town-ruins.svg",
+    "id": "f4f01b",
+    "label": "Fairline Hill Estates"
+  },
+  "Fallen Skybridge": {
+    "position": { "x": 672, "y": 524 },
+    "image": "elevated-highway.svg",
+    "id": "f4f02b",
+    "label": "Fallen Skybridge"
+  },
+  "Fallon's Department Store": {
+    "position": { "x": 530, "y": 708 },
+    "image": "office.svg",
+    "id": "f4f03b",
+    "label": "Fallon's Department Store"
+  },
+  "Faneuil Hall": {
+    "position": { "x": 698, "y": 468 },
+    "image": "faneuil-hall.svg",
+    "id": "f4f04b",
+    "label": "Faneuil Hall"
+  },
+  "Federal Ration Stockpile": {
+    "position": { "x": 224, "y": 346 },
+    "image": "bunker.svg",
+    "id": "f4f05b",
+    "label": "Federal Ration Stockpile"
+  },
+  "Federal Supply Cache 84NE": {
+    "position": { "x": 193, "y": 764 },
+    "image": "bunker.svg",
+    "id": "f4f06b",
+    "label": "Federal Supply Cache 84NE"
+  },
+  "Federal Surveillance Center K-21B": {
+    "position": { "x": 135, "y": 800 },
+    "image": "encampment.svg",
+    "id": "f4f07b",
+    "label": "Federal Surveillance Center K-21B"
+  },
+  "Fens Street Sewer": {
+    "position": { "x": 498, "y": 553 },
+    "image": "sewer.svg",
+    "id": "f4f09b",
+    "label": "Fens Street Sewer"
+  },
+  "Fiddler's Green Trailer Estates": {
+    "position": { "x": 255, "y": 446 },
+    "image": "camper.svg",
+    "id": "f4f10b",
+    "label": "Fiddler's Green Trailer Estates"
+  },
+  "Finch Farm": {
+    "position": { "x": 817, "y": 237 },
+    "image": "farm.svg",
+    "id": "f4f11b",
+    "label": "Finch Farm"
+  },
+  "Forest Grove Marsh": {
+    "position": { "x": 320, "y": 522 },
+    "image": "town-ruins.svg",
+    "id": "f4f14b",
+    "label": "Forest Grove Marsh"
+  },
+  "Forgotten Church": {
+    "position": { "x": 63, "y": 812 },
+    "image": "church.svg",
+    "id": "f4f15b",
+    "label": "Forgotten Church"
+  },
+  "Fort Hagen": {
+    "position": { "x": 205, "y": 464 },
+    "image": "military-base.svg",
+    "id": "f4f16b",
+    "label": "Fort Hagen"
+  },
+  "Fort Hagen Filling Station": {
+    "position": { "x": 208, "y": 444 },
+    "image": "filling-station.svg",
+    "id": "f4f18b",
+    "label": "Fort Hagen Filling Station"
+  },
+  "Fort Hagen Satellite Array": {
+    "position": { "x": 153, "y": 451 },
+    "image": "satellite.svg",
+    "id": "f4f19b",
+    "label": "Fort Hagen Satellite Array"
+  },
+  "Fort Strong": {
+    "position": { "x": 907, "y": 515 },
+    "image": "military-base.svg",
+    "id": "f4f20b",
+    "label": "Fort Strong"
+  },
+  "Four Leaf Fishpacking Plant": {
+    "position": { "x": 723, "y": 580 },
+    "image": "irish-pride.svg",
+    "id": "f4f22b",
+    "label": "Four Leaf Fishpacking Plant"
+  },
+  "Fraternal Post 115": {
+    "position": { "x": 470, "y": 430 },
+    "image": "monument.svg",
+    "id": "f4f23b",
+    "label": "Fraternal Post 115"
+  },
+  "Garden Terrace": {
+    "position": { "x": 692, "y": 458 },
+    "image": "skyscraper.svg",
+    "id": "f4g01b",
+    "label": "Garden Terrace"
+  },
+  "General Atomics Factory": {
+    "position": { "x": 743, "y": 594 },
+    "image": "factory.svg",
+    "id": "f4g02b",
+    "label": "General Atomics Factory"
+  },
+  "General Atomics Galleria": {
+    "position": { "x": 612, "y": 93 },
+    "image": "office.svg",
+    "id": "f4g03b",
+    "label": "General Atomics Galleria"
+  },
+  "Gibson Point Pier": {
+    "position": { "x": 860, "y": 269 },
+    "image": "pier.svg",
+    "id": "f4g04b",
+    "label": "Gibson Point Pier"
+  },
+  "Goodneighbor": {
+    "position": { "x": 671, "y": 492 },
+    "image": "goodneighbor.svg",
+    "id": "f4g05b",
+    "label": "Goodneighbor"
+  },
+  "Gorski Cabin": {
+    "position": { "x": 308, "y": 197 },
+    "image": "encampment.svg",
+    "id": "f4g06b",
+    "label": "Gorski Cabin"
+  },
+  "Graygarden": {
+    "position": { "x": 376, "y": 361 },
+    "image": "farm.svg",
+    "id": "f4g07b",
+    "label": "Graygarden"
+  },
+  "Greater Mass Blood Clinic": {
+    "position": { "x": 207, "y": 493 },
+    "image": "hospital.svg",
+    "id": "f4g09b",
+    "label": "Greater Mass Blood Clinic"
+  },
+  "Greenetech Genetics": {
+    "position": { "x": 575, "y": 437 },
+    "image": "skyscraper.svg",
+    "id": "f4g10b",
+    "label": "Greenetech Genetics"
+  },
+  "Greentop Nursery": {
+    "position": { "x": 709, "y": 155 },
+    "image": "farm.svg",
+    "id": "f4g11b",
+    "label": "Greentop Nursery"
+  },
+  "Gunners Plaza": {
+    "position": { "x": 523, "y": 778 },
+    "image": "radio-tower.svg",
+    "id": "f4g12b",
+    "label": "Gunners Plaza"
+  },
+  "Gwinnett Brewery": {
+    "position": { "x": 716, "y": 621 },
+    "image": "factory.svg",
+    "id": "f4g14b",
+    "label": "Gwinnett Brewery"
+  },
+  "Gwinnett Restaurant": {
+    "position": { "x": 721, "y": 639 },
+    "image": "office.svg",
+    "id": "f4g15b",
+    "label": "Gwinnett Restaurant"
+  },
+  "HalluciGen, Inc.": {
+    "position": { "x": 608, "y": 499 },
+    "image": "office.svg",
+    "id": "f4h01b",
+    "label": "HalluciGen, Inc."
+  },
+  "Hangman's Alley": {
+    "position": { "x": 493, "y": 519 },
+    "image": "urban-ruins.svg",
+    "id": "f4h02b",
+    "label": "Hangman's Alley"
+  },
+  "Harbormaster Hotel": {
+    "position": { "x": 705, "y": 532 },
+    "image": "urban-ruins.svg",
+    "id": "f4h03b",
+    "label": "Harbormaster Hotel"
+  },
+  "Hardware Town": {
+    "position": { "x": 481, "y": 588 },
+    "image": "town-ruins.svg",
+    "id": "f4h05b",
+    "label": "Hardware Town"
+  },
+  "Haymarket Mall": {
+    "position": { "x": 676, "y": 456 },
+    "image": "urban-ruins.svg",
+    "id": "f4h07b",
+    "label": "Haymarket Mall"
+  },
+  "Hesters Consumer Robotics": {
+    "position": { "x": 677, "y": 570 },
+    "image": "office.svg",
+    "id": "f4h08b",
+    "label": "Hesters Consumer Robotics"
+  },
+  "Hopesmarch Pentecostal Church": {
+    "position": { "x": 324, "y": 874 },
+    "image": "church.svg",
+    "id": "f4h10b",
+    "label": "Hopesmarch Pentecostal Church"
+  },
+  "Hub City Auto Wreckers": {
+    "position": { "x": 842, "y": 197 },
+    "image": "junkyard.svg",
+    "id": "f4h14b",
+    "label": "Hub City Auto Wreckers"
+  },
+  "Hubris Comics": {
+    "position": { "x": 613, "y": 525 },
+    "image": "office.svg",
+    "id": "f4h15b",
+    "label": "Hubris Comics"
+  },
+  "Hugo's Hole": {
+    "position": { "x": 895, "y": 134 },
+    "image": "radioactive-area.svg",
+    "id": "f4h16b",
+    "label": "Hugo's Hole"
+  },
+  "Hyde Park": {
+    "position": { "x": 611, "y": 763 },
+    "image": "town-ruins.svg",
+    "id": "f4h17b",
+    "label": "Hyde Park"
+  },
+  "Irish Pride Industries Shipyard": {
+    "position": { "x": 661, "y": 330 },
+    "image": "irish-pride.svg",
+    "id": "f4i01b",
+    "label": "Irish Pride Industries Shipyard"
+  },
+  "Jalbert Brothers Disposal": {
+    "position": { "x": 381, "y": 331 },
+    "image": "junkyard.svg",
+    "id": "f4j01b",
+    "label": "Jalbert Brothers Disposal"
+  },
+  "Jamaica Plain": {
+    "position": { "x": 623, "y": 712 },
+    "image": "town-ruins.svg",
+    "id": "f4j02b",
+    "label": "Jamaica Plain"
+  },
+  "Kendall Hospital": {
+    "position": { "x": 515, "y": 399 },
+    "image": "hospital.svg",
+    "id": "f4k02b",
+    "label": "Kendall Hospital"
+  },
+  "Kingsport Lighthouse": {
+    "position": { "x": 963, "y": 188 },
+    "image": "pier.svg",
+    "id": "f4k03b",
+    "label": "Kingsport Lighthouse"
+  },
+  "Lake Cochituate": {
+    "position": { "x": 244, "y": 631 },
+    "image": "pond-lake.svg",
+    "id": "f4l02b",
+    "label": "Lake Cochituate"
+  },
+  "Lake Quannapowitt": {
+    "position": { "x": 601, "y": 42 },
+    "image": "pond-lake.svg",
+    "id": "f4l03b",
+    "label": "Lake Quannapowitt"
+  },
+  "Layton Towers": {
+    "position": { "x": 588, "y": 574 },
+    "image": "city.svg",
+    "id": "f4l04b",
+    "label": "Layton Towers"
+  },
+  "Lexington": {
+    "position": { "x": 444, "y": 267 },
+    "image": "city.svg",
+    "id": "f4l05b",
+    "label": "Lexington"
+  },
+  "Lexington Apartments": {
+    "position": { "x": 464, "y": 285 },
+    "image": "city.svg",
+    "id": "f4l06b",
+    "label": "Lexington Apartments"
+  },
+  "Libertalia": {
+    "position": { "x": 921, "y": 366 },
+    "image": "libertalia.svg",
+    "id": "f4l07b",
+    "label": "Libertalia"
+  },
+  "Listening Post Bravo": {
+    "position": { "x": 746, "y": 178 },
+    "image": "bunker.svg",
+    "id": "f4l09b",
+    "label": "Listening Post Bravo"
+  },
+  "Lonely Chapel": {
+    "position": { "x": 195, "y": 316 },
+    "image": "church.svg",
+    "id": "f4l10b",
+    "label": "Lonely Chapel"
+  },
+  "Longneck Lukowski's Cannery": {
+    "position": { "x": 924, "y": 206 },
+    "image": "factory.svg",
+    "id": "f4l13b",
+    "label": "Longneck Lukowski's Cannery"
+  },
+  "Lynn Pier Parking": {
+    "position": { "x": 875, "y": 226 },
+    "image": "low-rise.svg",
+    "id": "f4l14b",
+    "label": "Lynn Pier Parking"
+  },
+  "Lynn Woods": {
+    "position": { "x": 763, "y": 54 },
+    "image": "settlement.svg",
+    "id": "f4l15b",
+    "label": "Lynn Woods"
+  },
+  "Mahkra Fishpacking": {
+    "position": { "x": 939, "y": 20 },
+    "image": "factory.svg",
+    "id": "f4m01b",
+    "label": "Mahkra Fishpacking"
+  },
+  "Malden Center": {
+    "position": { "x": 643, "y": 195 },
+    "image": "metro.svg",
+    "id": "f4m03b",
+    "label": "Malden Center"
+  },
+  "Malden Middle School": {
+    "position": { "x": 663, "y": 177 },
+    "image": "school.svg",
+    "id": "f4m06b",
+    "label": "Malden Middle School"
+  },
+  "Mass Bay Medical Center": {
+    "position": { "x": 664, "y": 555 },
+    "image": "hospital.svg",
+    "id": "f4m09b",
+    "label": "Mass Bay Medical Center"
+  },
+  "Mass Fusion Building": {
+    "position": { "x": 666, "y": 475 },
+    "image": "skyscraper.svg",
+    "id": "f4m10b",
+    "label": "Mass Fusion Building"
+  },
+  "Mass Fusion Containment Shed": {
+    "position": { "x": 666, "y": 107 },
+    "image": "factory.svg",
+    "id": "f4m11b",
+    "label": "Mass Fusion Containment Shed"
+  },
+  "Mass Fusion Disposal Site": {
+    "position": { "x": 279, "y": 676 },
+    "image": "radioactive-area.svg",
+    "id": "f4m12b",
+    "label": "Mass Fusion Disposal Site"
+  },
+  "Mass Gravel &amp; Sand": {
+    "position": { "x": 497, "y": 327 },
+    "image": "quarry.svg",
+    "id": "f4m14b",
+    "label": "Mass Gravel &amp; Sand"
+  },
+  "Mass Pike Interchange": {
+    "position": { "x": 285, "y": 590 },
+    "image": "elevated-highway.svg",
+    "id": "f4m15b",
+    "label": "Mass Pike Interchange"
+  },
+  "Mass Pike Tunnel East": {
+    "position": { "x": 559, "y": 584 },
+    "image": "settlement.svg",
+    "id": "f4m17b",
+    "label": "Mass Pike Tunnel East"
+  },
+  "Mass Pike Tunnel West": {
+    "position": { "x": 455, "y": 582 },
+    "image": "settlement.svg",
+    "id": "f4m18b",
+    "label": "Mass Pike Tunnel West"
+  },
+  "Massachusetts State House": {
+    "position": { "x": 637, "y": 498 },
+    "image": "monument.svg",
+    "id": "f4m19b",
+    "label": "Massachusetts State House"
+  },
+  "Med-Tek Research": {
+    "position": { "x": 680, "y": 209 },
+    "image": "hospital.svg",
+    "id": "f4m21b",
+    "label": "Med-Tek Research"
+  },
+  "Medford Memorial Hospital": {
+    "position": { "x": 626, "y": 188 },
+    "image": "hospital.svg",
+    "id": "f4m22b",
+    "label": "Medford Memorial Hospital"
+  },
+  "Medical Center Metro": {
+    "position": { "x": 647, "y": 563 },
+    "image": "metro.svg",
+    "id": "f4m23b",
+    "label": "Medical Center Metro"
+  },
+  "Milton General Hospital": {
+    "position": { "x": 547, "y": 690 },
+    "image": "hospital.svg",
+    "id": "f4m27b",
+    "label": "Milton General Hospital"
+  },
+  "Monsignor Plaza": {
+    "position": { "x": 601, "y": 405 },
+    "image": "city.svg",
+    "id": "f4m29b",
+    "label": "Monsignor Plaza"
+  },
+  "Murkwater Construction Site": {
+    "position": { "x": 605, "y": 848 },
+    "image": "pond-lake.svg",
+    "id": "f4m31b",
+    "label": "Murkwater Construction Site"
+  },
+  "Museum of Freedom": {
+    "position": { "x": 338, "y": 142 },
+    "image": "monument.svg",
+    "id": "f4m32b",
+    "label": "Museum of Freedom"
+  },
+  "Museum of Witchcraft": {
+    "position": { "x": 941, "y": 127 },
+    "image": "salem.svg",
+    "id": "f4m33b",
+    "label": "Museum of Witchcraft"
+  },
+  "Mystic Pines": {
+    "position": { "x": 478, "y": 244 },
+    "image": "town-ruins.svg",
+    "id": "f4m34b",
+    "label": "Mystic Pines"
+  },
+  "Nahant Chapel": {
+    "position": { "x": 1011, "y": 298 },
+    "image": "church.svg",
+    "id": "f4n02b",
+    "label": "Nahant Chapel"
+  },
+  "Nahant Oceanological Society": {
+    "position": { "x": 1032, "y": 339 },
+    "image": "pier.svg",
+    "id": "f4n03b",
+    "label": "Nahant Oceanological Society"
+  },
+  "Nahant Sheriff's Department": {
+    "position": { "x": 935, "y": 320 },
+    "image": "police-station.svg",
+    "id": "f4n04b",
+    "label": "Nahant Sheriff's Department"
+  },
+  "Nahant Wharf": {
+    "position": { "x": 931, "y": 338 },
+    "image": "pier.svg",
+    "id": "f4n05b",
+    "label": "Nahant Wharf"
+  },
+  "Natick Banks": {
+    "position": { "x": 207, "y": 643 },
+    "image": "town-ruins.svg",
+    "id": "f4n06b",
+    "label": "Natick Banks"
+  },
+  "Natick Police Department": {
+    "position": { "x": 223, "y": 647 },
+    "image": "police-station.svg",
+    "id": "f4n07b",
+    "label": "Natick Police Department"
+  },
+  "National Guard Training Yard": {
+    "position": { "x": 748, "y": 272 },
+    "image": "military-base.svg",
+    "id": "f4n08b",
+    "label": "National Guard Training Yard"
+  },
+  "Neponset Park": {
+    "position": { "x": 676, "y": 753 },
+    "image": "pond-lake.svg",
+    "id": "f4n09b",
+    "label": "Neponset Park"
+  },
+  "Nordhagen Beach": {
+    "position": { "x": 857, "y": 427 },
+    "image": "farm.svg",
+    "id": "f4n12b",
+    "label": "Nordhagen Beach"
+  },
+  "O'Neill Family Manufacturing": {
+    "position": { "x": 242, "y": 996 },
+    "image": "factory.svg",
+    "id": "f4o01b",
+    "label": "O'Neill Family Manufacturing"
+  },
+  "Oberland Station": {
+    "position": { "x": 383, "y": 462 },
+    "image": "farm.svg",
+    "id": "f4o03b",
+    "label": "Oberland Station"
+  },
+  "Old Corner Bookstore": {
+    "position": { "x": 679, "y": 476 },
+    "image": "office.svg",
+    "id": "f4o04b",
+    "label": "Old Corner Bookstore"
+  },
+  "Old Granary Burying Ground": {
+    "position": { "x": 652, "y": 503 },
+    "image": "graveyard.svg",
+    "id": "f4o05b",
+    "label": "Old Granary Burying Ground"
+  },
+  "Old Gullet Sinkhole": {
+    "position": { "x": 675, "y": 151 },
+    "image": "pond-lake.svg",
+    "id": "f4o06b",
+    "label": "Old Gullet Sinkhole"
+  },
+  "Old North Church": {
+    "position": { "x": 707, "y": 435 },
+    "image": "church.svg",
+    "id": "f4o07b",
+    "label": "Old North Church"
+  },
+  "Outpost Zimonja": {
+    "position": { "x": 539, "y": 15 },
+    "image": "radio-tower.svg",
+    "id": "f4o09b",
+    "label": "Outpost Zimonja"
+  },
+  "Park Street Station": {
+    "position": { "x": 653, "y": 517 },
+    "image": "metro.svg",
+    "id": "f4p01b",
+    "label": "Park Street Station"
+  },
+  "Parkview Apartments": {
+    "position": { "x": 487, "y": 564 },
+    "image": "city.svg",
+    "id": "f4p02b",
+    "label": "Parkview Apartments"
+  },
+  "Parsons Creamery": {
+    "position": { "x": 792, "y": 15 },
+    "image": "factory.svg",
+    "id": "f4p04b",
+    "label": "Parsons Creamery"
+  },
+  "Parsons State Insane Asylum": {
+    "position": { "x": 805, "y": 69 },
+    "image": "hospital.svg",
+    "id": "f4p05b",
+    "label": "Parsons State Insane Asylum"
+  },
+  "Peabody House": {
+    "position": { "x": 730, "y": 845 },
+    "image": "encampment.svg",
+    "id": "f4p07b",
+    "label": "Peabody House"
+  },
+  "Pickman Gallery": {
+    "position": { "x": 691, "y": 429 },
+    "image": "office.svg",
+    "id": "f4p09b",
+    "label": "Pickman Gallery"
+  },
+  "Police Precinct 8": {
+    "position": { "x": 550, "y": 541 },
+    "image": "police-station.svg",
+    "id": "f4p12b",
+    "label": "Police Precinct 8"
+  },
+  "Poseiden Energy Turbine 18-F": {
+    "position": { "x": 625, "y": 314 },
+    "image": "factory.svg",
+    "id": "f4p13b",
+    "label": "Poseiden Energy Turbine 18-F"
+  },
+  "Poseidon Energy": {
+    "position": { "x": 761, "y": 825 },
+    "image": "factory.svg",
+    "id": "f4p14b",
+    "label": "Poseidon Energy"
+  },
+  "Poseidon Reservoir": {
+    "position": { "x": 208, "y": 589 },
+    "image": "factory.svg",
+    "id": "f4p15b",
+    "label": "Poseidon Reservoir"
+  },
+  "Postal Square": {
+    "position": { "x": 696, "y": 508 },
+    "image": "urban-ruins.svg",
+    "id": "f4p16b",
+    "label": "Postal Square"
+  },
+  "Quincy Police Station": {
+    "position": { "x": 709, "y": 822 },
+    "image": "police-station.svg",
+    "id": "f4q00b",
+    "label": "Quincy Police Station"
+  },
+  "Quincy Quarries": {
+    "position": { "x": 643, "y": 788 },
+    "image": "quarry.svg",
+    "id": "f4q01b",
+    "label": "Quincy Quarries"
+  },
+  "Quincy Ruins": {
+    "position": { "x": 699, "y": 808 },
+    "image": "settlement.svg",
+    "id": "f4q02b",
+    "label": "Quincy Ruins"
+  },
+  "Radio Tower 3SM-U81": {
+    "position": { "x": 646, "y": 62 },
+    "image": "radio-tower.svg",
+    "id": "f4r01b",
+    "label": "Radio Tower 3SM-U81"
+  },
+  "Ranger Cabin": {
+    "position": { "x": 203, "y": 137 },
+    "image": "encampment.svg",
+    "id": "f4r07b",
+    "label": "Ranger Cabin"
+  },
+  "Recon Bunker Theta": {
+    "position": { "x": 667, "y": 11 },
+    "image": "bunker.svg",
+    "id": "f4r08b",
+    "label": "Recon Bunker Theta"
+  },
+  "Red Rocket Truck Stop": {
+    "position": { "x": 288, "y": 98 },
+    "image": "filling-station.svg",
+    "id": "f4r09b",
+    "label": "Red Rocket Truck Stop"
+  },
+  "Reeb Marina": {
+    "position": { "x": 829, "y": 282 },
+    "image": "pier.svg",
+    "id": "f4r10b",
+    "label": "Reeb Marina"
+  },
+  "Relay Tower 0BB-915": {
+    "position": { "x": 194, "y": 419 },
+    "image": "radio-tower.svg",
+    "id": "f4r11b",
+    "label": "Relay Tower 0BB-915"
+  },
+  "Relay Tower 0DB-521": {
+    "position": { "x": 354, "y": 919 },
+    "image": "radio-tower.svg",
+    "id": "f4r12b",
+    "label": "Relay Tower 0DB-521"
+  },
+  "Relay Tower 0MC-810": {
+    "position": { "x": 695, "y": 274 },
+    "image": "radio-tower.svg",
+    "id": "f4r13b",
+    "label": "Relay Tower 0MC-810"
+  },
+  "Relay Tower 0SC-527": {
+    "position": { "x": 566, "y": 649 },
+    "image": "radio-tower.svg",
+    "id": "f4r14b",
+    "label": "Relay Tower 0SC-527"
+  },
+  "Relay Tower 1DL-109": {
+    "position": { "x": 365, "y": 489 },
+    "image": "radio-tower.svg",
+    "id": "f4r15b",
+    "label": "Relay Tower 1DL-109"
+  },
+  "Revere Beach Station": {
+    "position": { "x": 826, "y": 319 },
+    "image": "metro.svg",
+    "id": "f4r16b",
+    "label": "Revere Beach Station"
+  },
+  "Revere Satellite Array": {
+    "position": { "x": 803, "y": 280 },
+    "image": "satellite.svg",
+    "id": "f4r17b",
+    "label": "Revere Satellite Array"
+  },
+  "Roadside Pines Motel": {
+    "position": { "x": 199, "y": 618 },
+    "image": "low-rise.svg",
+    "id": "f4r18b",
+    "label": "Roadside Pines Motel"
+  },
+  "Robotics Disposal Ground": {
+    "position": { "x": 353, "y": 13 },
+    "image": "junkyard.svg",
+    "id": "f4r19b",
+    "label": "Robotics Disposal Ground"
+  },
+  "Robotics Pioneer Park": {
+    "position": { "x": 370, "y": 732 },
+    "image": "forested.svg",
+    "id": "f4r20b",
+    "label": "Robotics Pioneer Park"
+  },
+  "Rocky Cave": {
+    "position": "left:87px;top:1026px;",
+    "image": "cave.svg",
+    "id": "f4r21b",
+    "label": "Rocky Cave"
+  },
+  "Rocky Narrows Park": {
+    "position": { "x": 344, "y": 328 },
+    "image": "camper.svg",
+    "id": "f4r22b",
+    "label": "Rocky Narrows Park"
+  },
+  "Rook Family House": {
+    "position": { "x": 987, "y": 72 },
+    "image": "town-ruins.svg",
+    "id": "f4r23b",
+    "label": "Rook Family House"
+  },
+  "Rotten Landfill": {
+    "position": { "x": 484, "y": 174 },
+    "image": "junkyard.svg",
+    "id": "f4r25b",
+    "label": "Rotten Landfill"
+  },
+  "Salem": {
+    "position": { "x": 984, "y": 96 },
+    "image": "office.svg",
+    "id": "f4s01b",
+    "label": "Salem"
+  },
+  "Sanctuary Hills": {
+    "position": { "x": 240, "y": 64 },
+    "image": "sanc-hills.svg",
+    "id": "f4s02b",
+    "label": "Sanctuary Hills"
+  },
+  "Sandy Coves Convalescent Home": {
+    "position": { "x": 963, "y": 102 },
+    "image": "hospital.svg",
+    "id": "f4s03b",
+    "label": "Sandy Coves Convalescent Home"
+  },
+  "Saugus Ironworks": {
+    "position": { "x": 815, "y": 188 },
+    "image": "factory.svg",
+    "id": "f4s04b",
+    "label": "Saugus Ironworks"
+  },
+  "Scrap Palace": {
+    "position": { "x": 392, "y": 762 },
+    "image": "junkyard.svg",
+    "id": "f4s08b",
+    "label": "Scrap Palace"
+  },
+  "Sentinel Site": {
+    "position": "left:240px;top:1049px;",
+    "image": "sentinel.svg",
+    "id": "f4s09b",
+    "label": "Sentinel Site"
+  },
+  "Shaw High School": {
+    "position": { "x": 567, "y": 709 },
+    "image": "school.svg",
+    "id": "f4s10b",
+    "label": "Shaw High School"
+  },
+  "Skylanes Flight 1665": {
+    "position": { "x": 303, "y": 974 },
+    "image": "airfield.svg",
+    "id": "f4s12b",
+    "label": "Skylanes Flight 1665"
+  },
+  "Skylanes Flight 1981": {
+    "position": { "x": 556, "y": 103 },
+    "image": "airfield.svg",
+    "id": "f4s13b",
+    "label": "Skylanes Flight 1981"
+  },
+  "Slocum's Joe Corporate HQ": {
+    "position": { "x": 656, "y": 194 },
+    "image": "urban-ruins.svg",
+    "id": "f4s16b",
+    "label": "Slocum's Joe Corporate HQ"
+  },
+  "Somerville Place": {
+    "position": { "x": 428, "y": 834 },
+    "image": "farm.svg",
+    "id": "f4s17b",
+    "label": "Somerville Place"
+  },
+  "South Boston High School": {
+    "position": { "x": 718, "y": 653 },
+    "image": "school.svg",
+    "id": "f4s19b",
+    "label": "South Boston High School"
+  },
+  "South Boston Military Checkpoint": {
+    "position": { "x": 643, "y": 641 },
+    "image": "military-base.svg",
+    "id": "f4s20b",
+    "label": "South Boston Military Checkpoint"
+  },
+  "South Boston Police Department": {
+    "position": { "x": 693, "y": 624 },
+    "image": "police-station.svg",
+    "id": "f4s21b",
+    "label": "South Boston Police Department"
+  },
+  "Spectacle Island": {
+    "position": { "x": 901, "y": 695 },
+    "image": "landmark.svg",
+    "id": "f4s25b",
+    "label": "Spectacle Island"
+  },
+  "Starlight Drive In": {
+    "position": { "x": 413, "y": 195 },
+    "image": "drive-in.svg",
+    "id": "f4s26b",
+    "label": "Starlight Drive In"
+  },
+  "Suffolk County Charter School": {
+    "position": { "x": 595, "y": 801 },
+    "image": "school.svg",
+    "id": "f4s28b",
+    "label": "Suffolk County Charter School"
+  },
+  "Sunshine Tidings Co-op": {
+    "position": { "x": 211, "y": 276 },
+    "image": "settlement.svg",
+    "id": "f4s29b",
+    "label": "Sunshine Tidings Co-op"
+  },
+  "Super-Duper Mart": {
+    "position": { "x": 435, "y": 257 },
+    "image": "urban-ruins.svg",
+    "id": "f4s30b",
+    "label": "Super-Duper Mart"
+  },
+  "Swan's Pond": {
+    "position": { "x": 627, "y": 513 },
+    "image": "swans-pond.svg",
+    "id": "f4s31b",
+    "label": "Swan's Pond"
+  },
+  "Taffington Boathouse": {
+    "position": { "x": 609, "y": 246 },
+    "image": "office.svg",
+    "id": "f4t01b",
+    "label": "Taffington Boathouse"
+  },
+  "Tenpines Bluff": {
+    "position": { "x": 485, "y": 61 },
+    "image": "farm.svg",
+    "id": "f4t02b",
+    "label": "Tenpines Bluff"
+  },
+  "The Castle": {
+    "position": { "x": 788, "y": 644 },
+    "image": "castle.svg",
+    "id": "f4t03b",
+    "label": "The Castle"
+  },
+  "The Shamrock Taphouse": {
+    "position": { "x": 719, "y": 517 },
+    "image": "office.svg",
+    "id": "f4t08b",
+    "label": "The Shamrock Taphouse"
+  },
+  "The Slog": {
+    "position": { "x": 806, "y": 139 },
+    "image": "farm.svg",
+    "id": "f4t09b",
+    "label": "The Slog"
+  },
+  "Thicket Excavations": {
+    "position": { "x": 388, "y": 90 },
+    "image": "quarry.svg",
+    "id": "f4t12b",
+    "label": "Thicket Excavations"
+  },
+  "Trinity Plaza": {
+    "position": { "x": 587, "y": 535 },
+    "image": "church.svg",
+    "id": "f4t18b",
+    "label": "Trinity Plaza"
+  },
+  "Trinity Tower": {
+    "position": { "x": 604, "y": 544 },
+    "image": "skyscraper.svg",
+    "id": "f4t19b",
+    "label": "Trinity Tower"
+  },
+  "Tucker Memorial Bridge": {
+    "position": { "x": 587, "y": 310 },
+    "image": "car.svg",
+    "id": "f4t20b",
+    "label": "Tucker Memorial Bridge"
+  },
+  "University Point": {
+    "position": { "x": 685, "y": 686 },
+    "image": "school.svg",
+    "id": "f4u03b",
+    "label": "University Point"
+  },
+  "USAF Satellite Station Olivia": {
+    "position": { "x": 406, "y": 44 },
+    "image": "satellite.svg",
+    "id": "f4u04b",
+    "label": "USAF Satellite Station Olivia"
+  },
+  "USS Constitution": {
+    "position": { "x": 697, "y": 386 },
+    "image": "uss-constitution.svg",
+    "id": "f4u05b",
+    "label": "USS Constitution"
+  },
+  "Vault 81": {
+    "position": { "x": 418, "y": 545 },
+    "image": "vault.svg",
+    "id": "f4v02b",
+    "label": "Vault 81"
+  },
+  "Vault 95": {
+    "position": { "x": 372, "y": 825 },
+    "image": "vault.svg",
+    "id": "f4v03b",
+    "label": "Vault 95"
+  },
+  "Vault 111": {
+    "position": { "x": 200, "y": 54 },
+    "image": "vault.svg",
+    "id": "f4v04b",
+    "label": "Vault 111"
+  },
+  "Vault-Tec Regional HQ": {
+    "position": { "x": 639, "y": 480 },
+    "image": "skyscraper.svg",
+    "id": "f4v05b",
+    "label": "Vault-Tec Regional HQ"
+  },
+  "Vertibird Wreckage": {
+    "position": { "x": 312, "y": 910 },
+    "image": "airfield.svg",
+    "id": "f4v06b",
+    "label": "Vertibird Wreckage"
+  },
+  "Walden Pond": {
+    "position": { "x": 287, "y": 253 },
+    "image": "pond-lake.svg",
+    "id": "f4w02b",
+    "label": "Walden Pond"
+  },
+  "Warwick Homestead": {
+    "position": { "x": 826, "y": 759 },
+    "image": "farm.svg",
+    "id": "f4w04b",
+    "label": "Warwick Homestead"
+  },
+  "Wattz Consumer Electronics": {
+    "position": { "x": 558, "y": 343 },
+    "image": "office.svg",
+    "id": "f4w06b",
+    "label": "Wattz Consumer Electronics"
+  },
+  "West Everett Estates": {
+    "position": { "x": 640, "y": 277 },
+    "image": "town-ruins.svg",
+    "id": "f4w10b",
+    "label": "West Everett Estates"
+  },
+  "West Roxbury Station": {
+    "position": { "x": 546, "y": 713 },
+    "image": "metro.svg",
+    "id": "f4w11b",
+    "label": "West Roxbury Station"
+  },
+  "Westing Estate": {
+    "position": { "x": 379, "y": 627 },
+    "image": "pond-lake.svg",
+    "id": "f4w12b",
+    "label": "Westing Estate"
+  },
+  "Weston Water Treatment Plant": {
+    "position": { "x": 321, "y": 449 },
+    "image": "industrial-dome.svg",
+    "id": "f4w13b",
+    "label": "Weston Water Treatment Plant"
+  },
+  "Wicked Shipping Fleet Lockup": {
+    "position": { "x": 222, "y": 165 },
+    "image": "factory.svg",
+    "id": "f4w14b",
+    "label": "Wicked Shipping Fleet Lockup"
+  },
+  "Wildwood Cemetery": {
+    "position": { "x": 535, "y": 157 },
+    "image": "graveyard.svg",
+    "id": "f4w15b",
+    "label": "Wildwood Cemetery"
+  },
+  "Wilson Atomatoys Corporate HQ": {
+    "position": { "x": 609, "y": 569 },
+    "image": "low-rise.svg",
+    "id": "f4w16b",
+    "label": "Wilson Atomatoys Corporate HQ"
+  },
+  "Wilson Atomatoys Factory": {
+    "position": { "x": 662, "y": 833 },
+    "image": "factory.svg",
+    "id": "f4w17b",
+    "label": "Wilson Atomatoys Factory"
+  },
+  "Wreck of the FMS Northern Star": {
+    "position": { "x": 841, "y": 804 },
+    "image": "shipwreck.svg",
+    "id": "f4w19b",
+    "label": "Wreck of the FMS Northern Star"
+  },
+  "Wreck of the USS Riptide": {
+    "position": { "x": 506, "y": 485 },
+    "image": "shipwreck.svg",
+    "id": "f4w20b",
+    "label": "Wreck of the USS Riptide"
+  },
+  "WRVR Broadcast Station": {
+    "position": { "x": 414, "y": 684 },
+    "image": "radio-tower.svg",
+    "id": "f4w21b",
+    "label": "WRVR Broadcast Station"
+  }
+}

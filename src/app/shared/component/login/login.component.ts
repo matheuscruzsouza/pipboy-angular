@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { tap } from "rxjs/operators";
 import { DataService } from "../../service/data.service";
 import { DatabaseService } from "../../service/database.service";
+import { UserService } from "../../service/user.service";
 
 @Component({
   selector: "app-login",
@@ -20,10 +21,15 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private dataService: DataService,
-    private databaseService: DatabaseService
+    private databaseService: DatabaseService,
+    private userService: UserService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userService.verify();
+
+    this.userService.login("matheus999", "teste1234");
+  }
 
   login() {
     const sub = this.databaseService

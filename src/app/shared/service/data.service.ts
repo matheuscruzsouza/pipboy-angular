@@ -3,7 +3,8 @@ import { Player } from "../model/player";
 import { Marker } from "../model/marker";
 import { Pistol, Weapon, Melee, Shotgun } from "../model/weapon";
 import { DatabaseService } from "./database.service";
-import { tap } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root",
@@ -11,10 +12,14 @@ import { tap } from "rxjs/operators";
 export class DataService {
   player: Player;
   player_change = new EventEmitter<Player>();
+  private locations = "assets/FalloutLocations.json";
 
   private path = ["pipboy-angular-rpg", "v1", "core", "player"];
 
-  constructor(private databaseService: DatabaseService) {
+  constructor(
+    private databaseService: DatabaseService,
+    private http: HttpClient
+  ) {
     if (this.databaseService.userStatus()) {
       this.preparePlayer();
     }
@@ -28,23 +33,7 @@ export class DataService {
   }
 
   getPlayerLocations() {
-    return [
-      new Marker("Vault 101", "vault", 409, 138, {
-        found: false,
-        travel: true,
-      }),
-      new Marker("Sanctuary", "sanctuary", 476, 162, {
-        found: false,
-        travel: true,
-      }),
-      new Marker("Red Rocket gas station", "red_rocket", 547, 213, {
-        width: 33,
-        height: 33,
-        found: false,
-        travel: true,
-      }),
-      new Marker("Hospital", "hospital", 1186, 386),
-    ];
+    return this.http.get(this.locations);
   }
 
   getPlayerPosition() {
