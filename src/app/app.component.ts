@@ -51,11 +51,11 @@ export class AppComponent implements AfterViewInit {
 
     const iframe = document.getElementById("iframe1") as HTMLIFrameElement;
 
-    iframe.contentWindow.document.write(
-      "<html><body>" +
-        '<audio controls autoplay><source src="http://fallout.fm:8000/falloutfm1.ogg" type="audio/ogg">Your browser does not support the audio element.</audio>' +
-        "</body></html>"
-    );
+    const audio = iframe.contentWindow.document.createElement("audio");
+    audio.src = "http://fallout.fm:8000/falloutfm1.ogg";
+    audio.autoplay = true;
+
+    iframe.contentWindow.document.body.appendChild(audio);
   }
 
   playAudio(src) {
