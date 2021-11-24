@@ -1,6 +1,6 @@
 # Pipboy
 
-https://matheuscruzsouza.github.io/pipboy-angular/
+[![Deploy to gh-pages](https://github.com/matheuscruzsouza/pipboy-angular/actions/workflows/main.yml/badge.svg)](https://github.com/matheuscruzsouza/pipboy-angular/actions/workflows/main.yml)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
