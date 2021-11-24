@@ -48,6 +48,14 @@ export class AppComponent implements AfterViewInit {
         this.playVideo(radio.url);
       }
     });
+
+    const iframe = document.getElementById("iframe1") as HTMLIFrameElement;
+
+    iframe.contentWindow.document.write(
+      "<html><body>" +
+        '<audio controls autoplay><source src="http://fallout.fm:8000/falloutfm1.ogg" type="audio/ogg">Your browser does not support the audio element.</audio>' +
+        "</body></html>"
+    );
   }
 
   playAudio(src) {
